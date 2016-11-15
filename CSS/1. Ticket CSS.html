@@ -6,12 +6,69 @@
     <meta charset="UTF-8">
     <style type="text/css">
         table {
-            background-color: #595959
+            background-color: #595959;
+            width: 305px;
+            text-align: left;
+        }
+        /*.div:before {
+            content: url('images/circle.jpg');
+        }*/
+        
+        .head {
+            height: 27px;
+            color: #BBBBBB;
+            font-family: verdana;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
         }
         
-        p {
+        .left {
+            vertical-align: top;
+            width: 33%;
+            height: 12px;
             color: white;
-            font-style: italic
+            font-family: verdana;
+            font-style: italic;
+            font-size: 10px;
+        }
+        
+        .right {
+            width: 67%;
+            height: 13px;
+            color: rgb(218, 213, 138);
+            font-family: verdana;
+            font-size: 11px;
+        }
+        
+        tbody .right p {
+            color: #B0BBB9;
+            font-family: verdana;
+            font-size: 10px;
+        }
+        
+        tbody .right span {
+            color: red;
+        }
+        
+        tfoot .left {
+            vertical-align: bottom;
+            width: 33%;
+            height: 12px;
+            color: white;
+            font-family: verdana;
+            font-style: italic;
+            font-size: 10px;
+        }
+        
+        tfoot .right {
+            color: #E06B44;
+        }
+        
+        #FirstRightCell:before {
+            content: url('./images/circle.jpg');
+            width: 5px;
+            height: 5px;
         }
     </style>
 </head>
@@ -20,17 +77,58 @@
     <table>
         <thead>
             <tr>
-                <td collspan="2">Ticked ID: 409788</td>
+                <td colspan="2" class="head">Ticket ID: 409788</td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
-                    <p>Name:</p>
+                <td rowspan="2" class="left">
+                    Name:
                 </td>
-                <td>Parker Seidel</td>
+                <td class="right" id="FirstRightCell">Parker Seidel</td>
+
+            </tr>
+            <tr>
+                <td class="right"><span>No Active Support</span></td>
+            </tr>
+            <tr>
+                <td class="left">
+                    <p>Email:</p>
+                </td>
+                <td class="right">
+                    siedel@aptmail.com
+                </td>
+            </tr>
+            <tr>
+                <td class="left">
+                    <p>Response Time:</p>
+                </td>
+                <td class="right">
+                    <p>72hours, 60hours left</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="left">
+                    <p></p>Last Action:</td>
+                <td class="right">
+                    <p>Never been locked.</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="right">Link to public post</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td class="left">
+                    Status:
+                </td>
+                <td class="right">
+                    Not answered
+                </td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 
