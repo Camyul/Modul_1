@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2. International Employees</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            width: 455px;
+            border-collapse: collapse;
+        }
+        
+        table td {
+            border-right: 1px solid #C0BEA4;
+        }
+        
+        table td:last-child {
+            border-right: 0;
+        }
+        
+        table th {
+            border-right: 1px solid #C0BEA4;
+        }
+        
+        table th:last-child {
+            border-right: 0;
+        }
+        
+        table tr:nth-child(2n) {
+            background-color: #ECECD8;
+        }
+        
+        th,
+        td {
+            padding: 4px;
+        }
+        
+        thead {
+            background-color: #50B306;
+            color: white;
+            font-size: 13px;
+            font-weight: normal;
+            text-align: left;
+        }
+        
+        tbody {
+            font-size: 13px;
+        }
+        
+        .row-contact {
+            width: 30%;
+        }
+        
+        .row-city {
+            width: 24%;
+        }
+        
+        .row-country {
+            width: 28%;
+        }
+        
+        .row-promoted {
+            width: 18%;
+        }
+        
+        input[type="checkbox"] {
+            background: green;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="row-contact">Contact name</th>
+                <th class="row-city">City</th>
+                <th class="row-country">Country</th>
+                <th class="row-promoted">Is Promoted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria Anders</td>
+                <td>Berlin</td>
+                <td> <img src="./images/germany-flag.png" alt="Germany Flag" width="22px" height="15px"> Germany</td>
+                <td><input type="checkbox" name="IsPromoted"></td>
+            </tr>
+            <tr>
+                <td>Ana Trujillo</td>
+                <td>M&eacute;xico D.F.</td>
+                <td> <img src="./images/mexico-flag.gif" alt="Mexico Flag" width="22px" height="15px"> Mexico</td>
+                <td><input type="checkbox" name="IsPromoted"></td>
+            </tr>
+            <tr>
+                <td>Antonio Moreno</td>
+                <td>M&eacute;xico D.F.</td>
+                <td> <img src="./images/mexico-flag.gif" alt="Mexico Flag" width="22px" height="15px"> Mexico</td>
+                <td><input type="checkbox" name="IsPromoted" checked></td>
+            </tr>
+            <tr>
+                <td>Thomas Hardy</td>
+                <td>London</td>
+                <td> <img src="./images/uk-flag.png" alt="Germany Flag" width="22px" height="15px"> UK</td>
+                <td><input type="checkbox" name="IsPromoted"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
