@@ -67,8 +67,59 @@ class Program
                     matrix[i+k, j+k] = count++;
                     k++;
                 }
-                
+            }
+        }
+        else
+        {
+            int row = 0;
+            int col = 0;
+            string direction = "down";
+            while (count <= size * size)
+            {
+                if ((direction == "down") && ((row > size - 1) || (matrix[row,col] > 0)))
+                {
+                    direction = "right";
+                    row--;
+                    col++;
+                }
+                if ((direction == "right") && ((col > size - 1) || (matrix[row, col] > 0)))
+                {
+                    direction = "up";
+                    col--;
+                    row--;
+                }
+                if ((direction == "up") && ((row < 0) || (matrix[row, col] > 0)))
+                {
+                    direction = "left";
+                    row++;
+                    col--;
+                }
+                if ((direction == "left") && ((col < 0) || (matrix[row, col] > 0)))
+                {
+                    direction = "down";
+                    col++;
+                    row++;
+                }
 
+                matrix[row, col] = count;
+                count++;
+
+                if (direction == "down")
+                {
+                    row++;
+                }
+                else if (direction == "right")
+                {
+                    col++;
+                }
+                else if (direction == "up")
+                {
+                    row--;
+                }
+                else
+                {
+                    col--;
+                }
             }
         }
         for (int i = 0; i < matrix.GetLength(0); i++)
