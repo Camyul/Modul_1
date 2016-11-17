@@ -10,7 +10,8 @@ class Program
     static int row;
     static int col;
     static int[,] matrixNums;
-    static int maxCount;
+    static int maxCount = 0;
+    static int count = 0;
     static bool[,] visitedElement;
     static void Main()
     {
@@ -35,34 +36,29 @@ class Program
                 visitedElement[i, j] = false;
             }
         }
-       MatrixCalculation();
-        Console.WriteLine(maxCount);
-    }
-
-    static void MatrixCalculation()
-    {
-        int element = 0;
-        int count = 0;
         for (int i = 0; i < row; i++)
         {
             for (int j = 0; j < col; j++)
             {
-                element = matrixNums[i, j];
+                int element = matrixNums[i, j];
                 DFSRecursive(element, i, j, ref count);
-                maxCount = MaxCounter(ref count);
+                if (maxCount < count)
+                {
+                    maxCount = count;
+                }
+                count = 0;
             }
         }
+        Console.WriteLine(maxCount);
     }
 
-    
-
-    static void DFSRecursive(int element, int i,int j,ref int count)
+    static void DFSRecursive(int element, int i, int j, ref int count)
     {
         if (i < 0 || j < 0 || i >= row || j >= col || visitedElement[i, j] == true)
         {
             return;
         }
-        if (matrixNums[i, j] == element)
+        if (element == matrixNums[i, j])
         {
             count++;
             visitedElement[i, j] = true;
@@ -71,15 +67,6 @@ class Program
             DFSRecursive(element, i, (j - 1), ref count);
             DFSRecursive(element, (i - 1), j, ref count);
         }
-       
-    }
-    static int MaxCounter(ref int count)
-    {
-        if (maxCount < count)
-        {
-            maxCount = count;
-        }
-        count = 0;
-        return count;
+        
     }
 }
