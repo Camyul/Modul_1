@@ -90,7 +90,38 @@ class Program
                     count = 1;
                     step++;
                 }
-                
+            }
+        }
+        k = matrixNums.GetLength(0) - 1;
+        l = matrixNums.GetLength(1) - 1;
+        while (!((k == 0) && (l == 0)))
+        {
+            int step = 0;
+
+            if (k > 0)
+            {
+                k--;
+            }
+            else
+            {
+                l--;
+            }
+            while ((k + step < matrixNums.GetLength(0) - 1) && (l - step > 0))
+            {
+                if (matrixNums[k + step, l - step] == matrixNums[k + step + 1, l - step - 1])
+                {
+                    count++;
+                    step++;
+                    if (maxCount < count)
+                    {
+                        maxCount = count;
+                    }
+                }
+                else
+                {
+                    count = 1;
+                    step++;
+                }
             }
         }
         Console.WriteLine(maxCount);
