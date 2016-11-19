@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4B40761-B1CF-42BD-BB16-A9986EBF6858}</ProjectGuid>
+    <ProjectGuid>{6E416E70-0025-426C-90A8-7C421F2B186D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_03.English_digit</RootNamespace>
-    <AssemblyName>_03.English_digit</AssemblyName>
+    <RootNamespace>_04.Appearance_count</RootNamespace>
+    <AssemblyName>_04.Appearance_count</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="03. English digit.cs" />
+    <Compile Include="04. Appearance count.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
