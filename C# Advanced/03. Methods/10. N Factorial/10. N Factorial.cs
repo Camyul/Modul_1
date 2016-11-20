@@ -3,18 +3,27 @@ using System.Numerics;
 
 class Program
 {
-    static BigInteger Factorial(int num)
+    //static BigInteger FactorialRacursive(int num)
+    //{
+    //    if (num > 1)
+    //    {
+    //        BigInteger tempFackt = num * Factorial(num - 1);
+    //        return tempFackt;
+    //    }
+    //    else
+    //    {
+    //        return 1;
+    //    }
+
+    //}
+    static BigInteger Factorial(int[] matrix)
     {
-        if (num > 1)
+        BigInteger result = 1;
+        foreach (var digit in matrix)
         {
-            BigInteger tempFackt = num * Factorial(num - 1);
-            return tempFackt;
+            result *= digit;
         }
-        else
-        {
-            return 1;
-        }
-        
+        return result;
     }
     static void Main()
     {
@@ -25,7 +34,7 @@ class Program
         {
             matrix[i-1] = i;
         }
-        factorial = Factorial(num);
+        factorial = Factorial(matrix);
         Console.WriteLine(factorial);
     }
 }
