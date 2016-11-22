@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Largest area in matrix 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Binary search", "04. Binary search\04. Binary search.csproj", "{32063D4A-EEBB-499C-BBCB-8361C28F3972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sort by string length", "5. Sort by string length\5. Sort by string length.csproj", "{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Sort by string length", "5. Sort by string length\05. Sort by string length.csproj", "{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
