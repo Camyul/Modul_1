@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Largest area in matrix 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Largest area in matrix v.3", "07. Largest area in matrix v.3\07. Largest area in matrix v.3.csproj", "{E55E53C9-C520-4958-8355-E3D61F71DAB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Binary search", "04. Binary search\04. Binary search.csproj", "{32063D4A-EEBB-499C-BBCB-8361C28F3972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. Sort by string length", "5. Sort by string length\5. Sort by string length.csproj", "{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E55E53C9-C520-4958-8355-E3D61F71DAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E55E53C9-C520-4958-8355-E3D61F71DAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E55E53C9-C520-4958-8355-E3D61F71DAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32063D4A-EEBB-499C-BBCB-8361C28F3972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32063D4A-EEBB-499C-BBCB-8361C28F3972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32063D4A-EEBB-499C-BBCB-8361C28F3972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32063D4A-EEBB-499C-BBCB-8361C28F3972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
