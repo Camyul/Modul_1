@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. String length", "06. St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Encode-decode", "07. Encode-decode\07. Encode-decode.csproj", "{DBE72C2B-37C7-48F4-8771-C4380569766C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Extract sentences", "08. Extract sentences\08. Extract sentences.csproj", "{F1DD0ADA-2D3A-4795-BDC2-8E7991423E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Forbidden words", "09. Forbidden words\09. Forbidden words.csproj", "{31403095-7D64-4250-8A47-C7E2B79D2257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{DBE72C2B-37C7-48F4-8771-C4380569766C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBE72C2B-37C7-48F4-8771-C4380569766C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBE72C2B-37C7-48F4-8771-C4380569766C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1DD0ADA-2D3A-4795-BDC2-8E7991423E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DD0ADA-2D3A-4795-BDC2-8E7991423E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DD0ADA-2D3A-4795-BDC2-8E7991423E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DD0ADA-2D3A-4795-BDC2-8E7991423E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31403095-7D64-4250-8A47-C7E2B79D2257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31403095-7D64-4250-8A47-C7E2B79D2257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31403095-7D64-4250-8A47-C7E2B79D2257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31403095-7D64-4250-8A47-C7E2B79D2257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
