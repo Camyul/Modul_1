@@ -311,12 +311,12 @@ body aside>ul>li ul li {
     margin-left: 10px;
     margin-bottom: 0px;
     margin-right: 0px;
-    background: url(images/li-dot.png) no-repeat;
+    background: url(images/li-dot2.png) no-repeat;
     background-position: 0 50%;
 }
 
 body aside>ul>li ul li:before {
-    background: url(/images/li-dot.png) no-repeat;
+    background: url(/images/li-dot2.png) no-repeat;
     background-size: 20px 10px;
     display: inline-block;
     width: 10px;
