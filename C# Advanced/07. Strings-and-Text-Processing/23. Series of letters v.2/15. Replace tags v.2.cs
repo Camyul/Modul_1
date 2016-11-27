@@ -11,7 +11,7 @@ namespace Replace_tags_v2
         static void Main()
         {
             string textHTML = Console.ReadLine();   //@"<p>Please visit <a href=""http://academy.telerik.com"">our site</a> to choose a training course. Also visit <a href=""www.devbg.org"">our forum</a> to discuss the courses.</p>";
-            int index = 0;
+            int index = -1;
             int startTag = 0;
             int endTag = 0;
             string tag = string.Empty;
