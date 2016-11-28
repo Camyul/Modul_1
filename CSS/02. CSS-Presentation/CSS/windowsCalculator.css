@@ -1,26 +1,80 @@
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
+table thead tr td {
+    height: 16px;
+    color: black;
+    font-size: 12px;
+    border-bottom: 1px solid dimgray;
+    border-collapse: collapse;
 }
 
-table {
-    width: 430px;
-    height: 10px;
-    border: 3px strong black;
+.headcell {
+    font-size: 12px;
+    background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*background-color: #D5DCEE;*/
+}
+
+.border {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+input[type="button"] {
+    height: 35px;
+    width: 35px;
     font-size: 10px;
-    background-color: #D5DCEE;
+    text-align: center;
+    vertical-align: middle;
+    color: #1C3C5E;
+}
+
+input[type="text"] {
+    width: 99%;
+    height: 40px;
+    padding-top: 20px;
+    vertical-align: bottom;
+    text-align: right;
+    font-size: 1.5em;
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(#FEEEDE, #FCF6BC);
+}
+
+#zero {
+    height: 35px;
+    width: 70px;
+}
+
+#equal {
+    height: 70px;
+    width: 35px;
+}
+
+#bin {
+    font-size: 8px;
+    width: 95%;
+    height: 45px;
+    padding-top: 20px;
+    vertical-align: bottom;
+    text-align: right;
+}
+
+input[name="inactive"] {
+    background-color: #D9E4F1;
+}
+
+td>form {
+    width: 80px;
+    vertical-align: middle;
+    text-align: left;
 }
 
 .innerTable {
     background-color: #D9E4F1;
     border: 1px solid gray;
+    color: #1C3C5E;
 }
 
-.outTable {}
-
-inpit[type=button] {
-    width: 10px;
-    height: 30px;
-    border-right: 3px strong black;
+span {
+    text-decoration: underline;
 }
