@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Windows Calculator</title>
+    <meta charset="UTF-8">
+    <link href="css/windowsCalculator.css" rel="stylesheet">
+</head>
+
+<body>
+    <table id="outTable">
+        <div>
+            <thead>
+                <td>View Edit Help</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <table class="innerTable">
+                        <thead>
+                            <td colspan="9"><input type="text" name="display" value="8854455"></td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="9">000000000 <br>000000000</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">
+                                    <form>
+                                        <input type="radio" name="Numeral System" value="Hex">Hex<br>
+                                        <input type="radio" name="Numeral System" value="Dec" checked>Dec<br>
+                                        <input type="radio" name="Numeral System" value="Oct">Oct<br>
+                                        <input type="radio" name="Numeral System" value="Bin">Bin<br>
+                                    </form>
+                                </td>
+                                <td><input type="button" name="inactive" value=""></td>
+                                <td><input type="button" name="active" value="Mod"></td>
+                                <td><input type="button" name="inactive" value="A"></td>
+                                <td><input type="button" name="inactive" value="MC"></td>
+                                <td><input type="button" name="inactive" value="MR"></td>
+                                <td><input type="button" name="inactive" value="MS"></td>
+                                <td><input type="button" name="inactive" value="M+"></td>
+                                <td><input type="button" name="inactive" value="M-"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" name="active" value="("></td>
+                                <td><input type="button" name="active" value=")"></td>
+                                <td><input type="button" name="inactive" value="B"></td>
+                                <td><input type="button" name="active" value="<--"></td>
+                                <td><input type="button" name="active" value="CE"></td>
+                                <td><input type="button" name="active" value="C"></td>
+                                <td><button type="button">+<br/>-</button></td>
+                                <td><input type="button" name="inactive" value="sqrt"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" name="active" value="Rol"></td>
+                                <td><input type="button" name="active" value="Ror"></td>
+                                <td><input type="button" name="inactive" value="C"></td>
+                                <td><input type="button" name="active" value="7"></td>
+                                <td><input type="button" name="active" value="8"></td>
+                                <td><input type="button" name="active" value="9"></td>
+                                <td><input type="button" name="active" value="/"></td>
+                                <td><input type="button" name="inactive" value="%"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">
+                                    <form>
+                                        <input type="radio" name="Numeral System" value="Qword" checked>Qword<br>
+                                        <input type="radio" name="Numeral System" value="Dword">Dword<br>
+                                        <input type="radio" name="Numeral System" value="Word">Word<br>
+                                        <input type="radio" name="Numeral System" value="Byte">Byte<br>
+                                    </form>
+                                </td>
+                                <td><input type="button" name="active" value="Or"></td>
+                                <td><input type="button" name="active" value="Xor"></td>
+                                <td><input type="button" name="inactive" value="D"></td>
+                                <td><input type="button" name="active" value="4"></td>
+                                <td><input type="button" name="active" value="5"></td>
+                                <td><input type="button" name="active" value="6"></td>
+                                <td><input type="button" name="active" value="*"></td>
+                                <td><input type="button" name="inactive" value="1/x"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" name="active" value="Lsh"></td>
+                                <td><input type="button" name="active" value="Rsh"></td>
+                                <td><input type="button" name="inactive" value="E"></td>
+                                <td><input type="button" name="active" value="1"></td>
+                                <td><input type="button" name="active" value="2"></td>
+                                <td><input type="button" name="active" value="3"></td>
+                                <td><input type="button" name="active" value="-"></td>
+                                <td rowspan="2"><input type="button" id="equal" name="active" value="="></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" name="active" value="Not"></td>
+                                <td><input type="button" name="active" value="And"></td>
+                                <td><input type="button" name="inactive" value="F"></td>
+                                <td colspan="2"><input type="button" name="active" value="0"></td>
+                                <td><input type="button" name="inactive" value="."></td>
+                                <td><input type="button" name="active" value="+"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </tr>
+            </tbody>
+        </div>
+    </table>
+
+</body>
+
+</html>

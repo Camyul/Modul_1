@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table {
+    width: 430px;
+    height: 10px;
+    border: 3px strong black;
+    font-size: 10px;
+    background-color: #D5DCEE;
+}
+
+.innerTable {
+    background-color: #D9E4F1;
+    border: 1px solid gray;
+}
+
+.outTable {}
+
+inpit[type=button] {
+    width: 10px;
+    height: 30px;
+    border-right: 3px strong black;
+}
