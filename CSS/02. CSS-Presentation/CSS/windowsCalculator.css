@@ -1,5 +1,6 @@
 table thead tr td {
     height: 16px;
+    width: 400px;
     color: black;
     font-size: 12px;
     border-bottom: 1px solid dimgray;
@@ -21,19 +22,21 @@ table thead tr td {
 input[type="button"] {
     height: 35px;
     width: 35px;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     vertical-align: middle;
     color: #1C3C5E;
 }
 
 input[type="text"] {
-    width: 99%;
-    height: 40px;
+    width: 400px;
+    height: 30px;
     padding-top: 20px;
     vertical-align: bottom;
     text-align: right;
     font-size: 1.5em;
+    font-family: consolas;
+    background: linear-gradient(#E5EEFB, #FEFFFF);
 }
 
 input[type="button"]:hover {
@@ -42,21 +45,20 @@ input[type="button"]:hover {
 
 #zero {
     height: 35px;
-    width: 70px;
+    width: 75px;
 }
 
 #equal {
-    height: 70px;
+    height: 75px;
     width: 35px;
 }
 
 #bin {
-    font-size: 8px;
-    width: 95%;
-    height: 45px;
-    padding-top: 20px;
-    vertical-align: bottom;
-    text-align: right;
+    font-size: 14px;
+    line-height: 0px;
+    width: 400px;
+    height: 30px;
+    padding-bottom: 0px;
 }
 
 input[name="inactive"] {
@@ -64,9 +66,11 @@ input[name="inactive"] {
 }
 
 td>form {
-    width: 80px;
+    width: 70px;
     vertical-align: middle;
     text-align: left;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .innerTable {
@@ -77,4 +81,32 @@ td>form {
 
 span {
     text-decoration: underline;
+}
+
+p.bit {
+    color: #1C3C5E;
+    font-family: consolas;
+    text-align: justify;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.bit:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+p.nums {
+    color: gray;
+    font-family: consolas;
+    text-align: justify;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nums:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
