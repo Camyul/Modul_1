@@ -13,7 +13,7 @@ namespace _01.Square_root
                 num = SqRoot(num);
                 Console.WriteLine("{0:F3}", num);
             }
-            catch (SystemException ann)
+            catch (SystemException)
             {
                 Console.WriteLine("Invalid number");
                 //Console.WriteLine(ann.Message);
