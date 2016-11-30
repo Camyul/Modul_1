@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Menu List</title>
+    <meta charset="UTF-8">
+    <style>
+        .hide {
+            display: none;
+        }
+        
+        nav>ul>li {
+            float: left;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+        
+        ul li span {
+            color: mediumvioletred;
+            background-color: forestgreen
+        }
+        
+        ul li a {
+            color: mediumvioletred;
+            background-color: lime;
+        }
+        
+        nav ul li:hover .hide {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li>Item1
+                    <ul class="hide">
+                        <li><a href="#"> SubItem1</a></li>
+                        <li><span>SubItem2</span></li>
+                        <li>SubItem3</li>
+                    </ul>
+                </li>
+                <li>Item2
+                    <ul class="hide">
+                        <li>SubItem1</li>
+                        <li>SubItem2</li>
+                        <li>SubItem3</li>
+                    </ul>
+                </li>
+                <li>Item3
+                    <ul class="hide">
+                        <li>SubItem1</li>
+                        <li>SubItem2</li>
+                        <li>SubItem3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
