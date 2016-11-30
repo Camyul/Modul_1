@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Binary search", "04. Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Sort by string length", "5. Sort by string length\05. Sort by string length.csproj", "{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Matrix class", "06. Matrix class\06. Matrix class.csproj", "{731B1178-ECF6-4F02-A6D9-4528AAFEA0E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B7FFA51-6EEA-4266-83DD-11E3992A7C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731B1178-ECF6-4F02-A6D9-4528AAFEA0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731B1178-ECF6-4F02-A6D9-4528AAFEA0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731B1178-ECF6-4F02-A6D9-4528AAFEA0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731B1178-ECF6-4F02-A6D9-4528AAFEA0E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
