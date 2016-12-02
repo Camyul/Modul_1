@@ -2,18 +2,22 @@ html {
     font-size: 20px;
 }
 
-#main {
-    min-width: 100px;
+.main {
     border: 1px solid black;
-    font-size: 2rem;
-    width: 40%;
-    height: 200px;
-    overflow: auto;
-    /*display: flex;
-    justify-content: center;*/
+    margin-left: 50px;
+    padding: 20px;
+    display: flex;
+    background-color: lightsteelblue;
+    /*justify-content: center;*/
 }
 
-.inner-div {
-    border: 1px solid black;
-    width: 50%;
+.inner {
+    min-width: 100px;
+    border: 1px solid red;
+    width: 30%;
+    background-color: olivedrab;
+    padding: 30px;
+    font-size: 2rem;
+    height: 150px;
+    overflow: auto;
 }
