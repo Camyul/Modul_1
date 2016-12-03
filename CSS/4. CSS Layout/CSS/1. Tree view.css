@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+    line-height: 3px;
+}
+
+ul li {
+    margin-top: 5px;
+    line-height: 12px;
+    margin-left: -30px;
+}
+
+span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+}
+
+ul.hidden {
+    display: none;
+}
+
+ul li:hover ul.hidden {
+    display: block;
+    color: #98A5B5;
+}
+
+li ul li:hover ul {
+    display: block;
+    color: #98A5B5;
+}
