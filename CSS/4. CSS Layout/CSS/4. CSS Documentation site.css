@@ -1,0 +1,24 @@
+body {
+    display: flex
+}
+
+div.left {
+    width: 17%;
+    height: 600px;
+    background-color: lime;
+    border: 1px solid black;
+}
+
+div.middle {
+    width: 53%;
+    height: 600px;
+    background-color: lime;
+    border: 1px solid black;
+}
+
+div.right {
+    width: 30%;
+    height: 600px;
+    background-color: lime;
+    border: 1px solid black;
+}
