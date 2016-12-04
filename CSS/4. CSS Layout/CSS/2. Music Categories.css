@@ -21,7 +21,7 @@ span {
 .inner {
     width: 397px;
     height: 118px;
-    padding: 10px;
+    padding: 10px 0px;
     box-sizing: border-box;
     border: 1px solid black;
     position: relative;
@@ -40,14 +40,13 @@ span {
 
 .button {
     display: flex;
-    border: 1px solid black;
     align-items: flex-end;
     justify-content: flex-end;
     height: 35%
 }
 
 img {
-    width: 100%;
+    width: 93%;
     height: 100%;
 }
 
@@ -67,8 +66,8 @@ input {
     text-align: center;
 }
 
-#listen {
-    width: 200px;
+.listen {
+    width: 43%;
     ;
 }
 
