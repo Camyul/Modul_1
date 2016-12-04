@@ -16,6 +16,10 @@
     /* IE6-9 */
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .bodydiv {
@@ -24,4 +28,59 @@
     background-color: #3B3B3B;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+}
+
+input[placeholder] {
+    padding-left: 10px;
+}
+
+input {
+    width: 135px;
+}
+
+input.submit {
+    width: 55px;
+    height: 30px;
+    color: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb0004+0,fc0d10+100 */
+    background: #cb0004;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #cb0004 0%, #fc0d10 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cb0004 0%, #fc0d10 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cb0004 0%, #fc0d10 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#cb0004', endColorstr='#fc0d10', GradientType=0);
+    /* IE6-9 */
+    border: 1px outset white;
+    border-radius: 13px;
+}
+
+div span {
+    color: white;
+    font-size: 23px;
+}
+
+p span {
+    font-size: 15px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 200;
+    color: #A4A4A4;
+    line-height: 17px;
+}
+
+h1 {
+    margin: 0;
+    color: #FCD619;
+    font-weight: normal;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+    padding: 8px;
 }
