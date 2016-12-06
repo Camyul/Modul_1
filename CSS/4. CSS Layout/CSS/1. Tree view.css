@@ -12,19 +12,18 @@ ul li {
 span:hover {
     text-decoration: underline;
     cursor: pointer;
-    display: block;
 }
 
 ul.hidden {
     display: none;
 }
 
-ul li:hover ul.hidden {
+ul li:hover>ul.hidden {
     display: block;
     color: #98A5B5;
 }
 
-li ul li:hover ul {
+ul li:hover>ul {
     display: block;
     color: #98A5B5;
 }
