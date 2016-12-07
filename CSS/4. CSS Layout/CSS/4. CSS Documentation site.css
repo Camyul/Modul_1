@@ -1,24 +1,36 @@
 body {
-    display: flex
-}
-
-div.left {
-    width: 17%;
-    height: 600px;
-    background-color: lime;
+    width: 785px;
+    height: 578px;
+    display: flex;
     border: 1px solid black;
 }
 
+div.left {
+    width: 18%;
+    background-color: #F1F1F1;
+    border: none
+}
+
 div.middle {
-    width: 53%;
-    height: 600px;
-    background-color: lime;
+    width: 63%;
+    margin-top: 3px;
+    margin-bottom: 24px;
+    background-color: white;
     border: 1px solid black;
 }
 
 div.right {
-    width: 30%;
-    height: 600px;
-    background-color: lime;
-    border: 1px solid black;
+    width: 19%;
+    background-color: white;
+    border: none;
+}
+
+h6 {
+    margin: 0;
+    padding-top: 14px;
+}
+
+h6:before {
+    content: url('./../images/home.png');
+    padding-right: 5px;
 }
