@@ -3,6 +3,12 @@ body {
     height: 578px;
     display: flex;
     border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h6,
+p {
+    margin: 0;
 }
 
 div.left {
@@ -26,11 +32,21 @@ div.right {
 }
 
 h6 {
-    margin: 0;
     padding-top: 14px;
 }
 
 h6:before {
     content: url('./../images/home.png');
     padding-right: 5px;
+}
+
+.red {
+    color: #951614;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 11px;
+}
+
+p {
+    font-size: 11px;
 }
