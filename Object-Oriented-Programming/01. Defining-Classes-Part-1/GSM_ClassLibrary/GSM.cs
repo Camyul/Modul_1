@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GSM_ClassLibrary
 {
@@ -10,29 +6,31 @@ namespace GSM_ClassLibrary
     {
         private string model;
         private string manufacturer;
-        private uint price;
+        private int price;
         private string owner;
+        private static GSM iPhone4;
 
-        
+
 
         public GSM()
         {
             this.model = null;
             this.manufacturer = null;
         }
-        public GSM(string model, string manufacturer, uint price)
+        public GSM(string model, string manufacturer, int price)
         {
             this.model = model;
             this.manufacturer = manufacturer;
             this.price = price;
         }
-        public GSM(string model, string manufacturer, uint price, string owner)
-        {
-            this.model = model;
-            this.manufacturer = manufacturer;
-            this.price = price;
+        public GSM(string model, string manufacturer, int price, string owner) : this(model, manufacturer, price)
+        { // С двете точки Пренасочва към горния конструктор.
             this.owner = owner;
         }
+        //public static GSM IPhone4
+        //{
+
+        //}
         public string Model
         {
             get
@@ -41,7 +39,7 @@ namespace GSM_ClassLibrary
             }
             set
             {
-                if (value != null)
+                if (!String.IsNullOrEmpty(value))
                 {
                     this.model = value;
                 }
@@ -60,7 +58,7 @@ namespace GSM_ClassLibrary
             }
             set
             {
-                if (value != null)
+                if (!String.IsNullOrEmpty(value))
                 {
                     this.manufacturer = value;
                 }
@@ -71,7 +69,7 @@ namespace GSM_ClassLibrary
 
             }
         }
-        public uint Price
+        public int Price
         {
             get
             {
@@ -98,21 +96,13 @@ namespace GSM_ClassLibrary
             }
             set
             {
-                if (value.Length >  20)
-                {
-                    throw new ArgumentOutOfRangeException("name must be < 20 letters");
-                }
-                else
-                {
-                    this.owner = value;
-                }
-
+               this.owner = value;
             }
         }
-        public void PrintGSM()
+        public override string ToString()
         {
-            Console.WriteLine("Model: {0}\n\rManufacturer: {1}", this.model, this.manufacturer);
-            Console.WriteLine("Price: {0}\n\rOwner: {1}", this.price, this.owner ?? "No Owner");
+            return String.Format("Model: {0}\n\rManufacturer: {1}\n\rPrice: {2}\n\rOwner: {3}",
+                this.model, this.manufacturer, this.price, this.owner ?? "No Owner");
         }
     }
 }

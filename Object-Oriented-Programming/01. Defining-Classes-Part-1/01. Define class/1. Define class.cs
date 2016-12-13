@@ -20,13 +20,19 @@ namespace Define_class
             Console.Write("Enter Manufacturer Name: ");
             firstGSM.Manufacturer = Console.ReadLine();
             Console.Write("Enter GSM Price: ");
-            firstGSM.Price = uint.Parse(Console.ReadLine());
+            firstGSM.Price = int.Parse(Console.ReadLine());
             Console.Write("Enter GSM Owner Name: ");
             firstGSM.Owner = Console.ReadLine();
+            firstBattery.BatModel = "BS-50HL";
+            firstBattery.HoursIdle = 100;
+            firstBattery.HoursTalk = 4;
+            firstDisplay.DisplaySize = 5.5;
+            firstDisplay.NumberOfColor = 65000;
 
-            firstGSM.PrintGSM();
-            firstBattery.PrintBattery();
-            firstDisplay.PrintDisplay();
+            Console.WriteLine(firstGSM.ToString());
+            Console.WriteLine(firstBattery.ToString());
+            Console.WriteLine(firstDisplay.ToString());
+
 
         }
     }
