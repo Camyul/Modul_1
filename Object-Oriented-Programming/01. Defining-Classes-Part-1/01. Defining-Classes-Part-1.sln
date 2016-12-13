@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Define class", "01. Define class\01. Define class.csproj", "{CADAD995-7A9D-4D3A-A408-A33C3452EE42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSM_ClassLibrary", "GSM_ClassLibrary\GSM_ClassLibrary.csproj", "{22AE7F65-11EB-407B-A4D6-35942D191C8C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CADAD995-7A9D-4D3A-A408-A33C3452EE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADAD995-7A9D-4D3A-A408-A33C3452EE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADAD995-7A9D-4D3A-A408-A33C3452EE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADAD995-7A9D-4D3A-A408-A33C3452EE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22AE7F65-11EB-407B-A4D6-35942D191C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22AE7F65-11EB-407B-A4D6-35942D191C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22AE7F65-11EB-407B-A4D6-35942D191C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22AE7F65-11EB-407B-A4D6-35942D191C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
