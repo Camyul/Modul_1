@@ -11,11 +11,21 @@ namespace Define_class
     {
         static void Main()
         {
-            GSM firstGSM = new GSM("N70", "Nokia");
+
+            GSM firstGSM = new GSM();
+            Battery firstBattery = new Battery();
+            Display firstDisplay = new Display();
+            Console.Write("Enter GSM Model: ");
+            firstGSM.Model = Console.ReadLine();
+            Console.Write("Enter Manufacturer Name: ");
+            firstGSM.Manufacturer = Console.ReadLine();
+            Console.Write("Enter GSM Price: ");
+            firstGSM.Price = uint.Parse(Console.ReadLine());
+            Console.Write("Enter GSM Owner Name: ");
+            firstGSM.Owner = Console.ReadLine();
+
             firstGSM.PrintGSM();
-            Battery firstBattery = new Battery("BS-50HL");
             firstBattery.PrintBattery();
-            Display firstDisplay = new Display("5.5", "16K");
             firstDisplay.PrintDisplay();
 
         }
