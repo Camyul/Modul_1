@@ -9,8 +9,9 @@ namespace GSM_ClassLibrary
     public class Battery
     {
         private string batModel;
-        private int? hoursIdle;
-        private int? hoursTalk;
+        private string hoursIdle;
+        private string hoursTalk;
+        private BatteryType batteryType = BatteryType.LiPol;
 
         public Battery()
         {
@@ -24,16 +25,17 @@ namespace GSM_ClassLibrary
             this.hoursIdle = null;
             this.hoursTalk = null;
         }
-        public Battery(string batModel, int hoursIdle, int hoursTalk)
+        public Battery(string batModel, string hoursIdle, string hoursTalk)
         {
             this.batModel = batModel;
             this.hoursIdle = hoursIdle;
             this.hoursTalk = hoursTalk;
         }
+       
         public void PrintBattery()
         {
-            Console.WriteLine("Model: {0}\n\rHoursIdle: {1}\n\rHoursTalk: {2}",
-                            this.batModel ?? "n\\a", this.hoursIdle, this.hoursTalk);
+            Console.WriteLine("Model: {0}\n\rHoursIdle: {1}\n\rHoursTalk: {2}\n\rBatteryType: {3}",
+                            this.batModel ?? "n\\a", this.hoursIdle ?? "n\\a", this.hoursTalk ?? "n\\a", batteryType);
         }
     }
 }

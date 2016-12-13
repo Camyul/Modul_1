@@ -8,15 +8,15 @@ namespace GSM_ClassLibrary
 {
     public class Display
     {
-        private float? displaySize;
-        private long? numberOfColor;
+        private string displaySize;
+        private string numberOfColor;
 
         public Display()
         {
             this.displaySize = null;
             this.numberOfColor = null;
         }
-        public Display(float displaySize, long numberOfColor)
+        public Display(string displaySize, string numberOfColor)
         {
             this.displaySize = displaySize;
             this.numberOfColor = numberOfColor;
@@ -24,7 +24,7 @@ namespace GSM_ClassLibrary
         public void PrintDisplay()
         {
             Console.WriteLine("Display Size: {0}\n\rNumber Of Color: {1}",
-                            this.displaySize, this.numberOfColor);
+                            this.displaySize ?? "n\\a", this.numberOfColor ?? "n\\a");
         }
     }
 }

@@ -13,9 +13,11 @@ namespace Define_class
         {
             GSM firstGSM = new GSM("N70", "Nokia");
             firstGSM.PrintGSM();
-            Battery firstBattery = new Battery("BS-50HL", 120, 6);
+            Battery firstBattery = new Battery("BS-50HL");
             firstBattery.PrintBattery();
-            Display firstDisplay = new Display("5.5", 16K)
+            Display firstDisplay = new Display("5.5", "16K");
+            firstDisplay.PrintDisplay();
+
         }
     }
 }

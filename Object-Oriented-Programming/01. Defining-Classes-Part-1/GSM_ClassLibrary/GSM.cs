@@ -10,7 +10,7 @@ namespace GSM_ClassLibrary
     {
         private string model;
         private string manufacturer;
-        private double? price;
+        private string price;
         private string owner;
 
         public GSM(string model, string manufacturer)
@@ -19,13 +19,13 @@ namespace GSM_ClassLibrary
             this.manufacturer = manufacturer;
             this.price = null;
         }
-        public GSM(string model, string manufacturer, double price)
+        public GSM(string model, string manufacturer, string price)
         {
             this.model = model;
             this.manufacturer = manufacturer;
             this.price = price;
         }
-        public GSM(string model, string manufacturer, double price, string owner)
+        public GSM(string model, string manufacturer, string price, string owner)
         {
             this.model = model;
             this.manufacturer = manufacturer;
@@ -36,7 +36,7 @@ namespace GSM_ClassLibrary
         public void PrintGSM()
         {
             Console.WriteLine("Model: {0}\n\rManufacturer: {1}", this.model, this.manufacturer);
-            Console.WriteLine("Price: {0}\n\rOwner: {1}", this.price, this.owner ?? "No Owner");
+            Console.WriteLine("Price: {0}\n\rOwner: {1}", this.price ?? "No Price", this.owner ?? "No Owner");
         }
     }
 }
