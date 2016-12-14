@@ -18,10 +18,12 @@ namespace GSM_ClassLibrary
 
         public void DisplayTest()
         {
+            Console.WriteLine("GSM Test, Display the information about the GSMs in the array: ");
+            Console.WriteLine("Model\t\tManufacturer\tPrice\tOwner");
             foreach (var gsm in gsmArray)
             {
-                Console.Write("Model: {0}\n\rManufacturer: {1}\n\r",
-                gsm.Model, gsm.Manufacturer);
+                Console.Write("{0}\t\t{1}\t\t{2}\t{3}\n",
+                gsm.Model, gsm.Manufacturer, gsm.Price, gsm.Owner ?? "No Owner");
             }
         }
 

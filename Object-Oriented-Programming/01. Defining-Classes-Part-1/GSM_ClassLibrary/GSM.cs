@@ -8,7 +8,7 @@ namespace GSM_ClassLibrary
     {
         private string model;
         private string manufacturer;
-        private int price;
+        private int? price;
         private string owner;
         private static GSM iPhone4S = new GSM("IPhone 4S", "Apple");
         private List<Call> callHistory = new List<Call>();
@@ -19,11 +19,11 @@ namespace GSM_ClassLibrary
             this.model = model;
             this.manufacturer = manufacturer;
         }
-        public GSM(string model, string manufacturer, int price):this(model, manufacturer)
+        public GSM(string model, string manufacturer, int? price):this(model, manufacturer)
         {
             this.price = price;
         }
-        public GSM(string model, string manufacturer, int price, string owner) : this(model, manufacturer, price)
+        public GSM(string model, string manufacturer, int? price, string owner) : this(model, manufacturer, price)
         { // С двете точки Пренасочва към горния конструктор.
             this.owner = owner;
         }
@@ -93,7 +93,7 @@ namespace GSM_ClassLibrary
 
             }
         }
-        public int Price
+        public int? Price
         {
             get
             {
@@ -178,8 +178,11 @@ namespace GSM_ClassLibrary
         }
         public override string ToString()
         {
-            return String.Format("Model: {0}\n\rManufacturer: {1}\n\rPrice: {2}\n\rOwner: {3}",
-                this.model, this.manufacturer, this.price, this.owner ?? "No Owner");
+            //Console.WriteLine("Model\tManufacturer\tPrice\tOwner");
+            return String.Format("{0}\t{1}\t\t{2}\t{3}\n",
+                this.Model, this.Manufacturer, this.Price, this.Owner ?? "No Owner");
+            //return String.Format("Model: {0}\n\rManufacturer: {1}\n\rPrice: {2}\n\rOwner: {3}",
+            //    this.model, this.manufacturer, this.price, this.owner ?? "No Owner");
         }
     }
 }
