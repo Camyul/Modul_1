@@ -8,29 +8,36 @@ namespace GSM_ClassLibrary
         private string manufacturer;
         private int price;
         private string owner;
-        private static GSM iPhone4;
+        //private static string iPhone4S;
+        private static GSM iPhone4S = new GSM("IPhone 4S", "Apple");
 
 
-
-        public GSM()
-        {
-            this.model = null;
-            this.manufacturer = null;
-        }
-        public GSM(string model, string manufacturer, int price)
+        public GSM(string model, string manufacturer)
         {
             this.model = model;
             this.manufacturer = manufacturer;
+        }
+        public GSM(string model, string manufacturer, int price):this(model, manufacturer)
+        {
             this.price = price;
         }
         public GSM(string model, string manufacturer, int price, string owner) : this(model, manufacturer, price)
         { // С двете точки Пренасочва към горния конструктор.
             this.owner = owner;
         }
-        //public static GSM IPhone4
-        //{
 
-        //}
+        public static GSM IPhone4S
+        {
+            get
+            {
+                return iPhone4S;
+            }
+            set
+            {
+                
+                iPhone4S = value;
+            }
+        }
         public string Model
         {
             get
