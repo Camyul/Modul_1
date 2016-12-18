@@ -1,4 +1,4 @@
-function solve(args){
+function solve(args) {
     var height = args[0];
     var width = args[1];
     var area = (height * width).toFixed(2);
