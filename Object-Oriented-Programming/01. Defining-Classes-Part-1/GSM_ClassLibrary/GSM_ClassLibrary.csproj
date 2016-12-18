@@ -46,7 +46,9 @@
     <Compile Include="Display.cs" />
     <Compile Include="GSM.cs" />
     <Compile Include="GSMTest.cs" />
-    <Compile Include="HistoryTest.cs" />
+    <Compile Include="HistoryTest.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

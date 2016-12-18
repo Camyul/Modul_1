@@ -31,7 +31,5 @@ namespace GSM_ClassLibrary
             Console.WriteLine(testHistoryGSM.CallsInfo());
 
         }
-
-
     }
 }
