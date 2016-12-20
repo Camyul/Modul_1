@@ -1,4 +1,4 @@
-//function solve(args){
+function solve(args){
 var num = 17;
 var sqrtNum = Math.floor(Math.sqrt(num));
 var isPrime = true;
@@ -17,4 +17,4 @@ else{
     isPrime = false;
     return isPrime;
 }
-//}
+}
