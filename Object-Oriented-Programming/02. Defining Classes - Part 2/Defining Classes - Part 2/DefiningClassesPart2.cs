@@ -7,9 +7,14 @@
     {
         static void Main()
         {
+            //Create two 3D Points and Print it
             Point3D firstPoint = new Point3D (1.1, 2.2, 3.3);
             Console.WriteLine(firstPoint.ToString());
-            Console.WriteLine(Point3D.O.ToString());
+            Point3D secondPoint = Point3D.Center; 
+            Console.WriteLine(Point3D.Center.ToString());
+
+            //Calculate distance with static class and static method and print it
+            Console.WriteLine("Distance: {0}", Distance.Calculate(firstPoint, secondPoint));
         }
     }
 }

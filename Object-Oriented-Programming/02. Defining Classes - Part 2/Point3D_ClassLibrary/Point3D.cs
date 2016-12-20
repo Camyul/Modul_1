@@ -3,26 +3,29 @@
     using System;
     public struct Point3D
     {
-        private double x;
-        private double y;
-        private double z;
-        private static readonly Point3D o = new Point3D(0, 0, 0);
 
-        public Point3D(double x, double y, double z)
+        private static readonly Point3D center = new Point3D(0, 0, 0); // Static field
+
+        //Constructor
+        public Point3D(double x, double y, double z):this()
         {
-            this.x = x;
-            this.y = y;
-            this.z = z;
+            this.X = x;
+            this.Y = y;
+            this.Z = z;
         }
-        public static Point3D O { 
+        public static Point3D Center // Static Property
+        {
             get
             {
-                return o;
+                return center;
             }
-    }
+        }
+        public double X { get; private set; }
+        public double Y { get; private set; }
+        public double Z { get; private set; }
         public override string ToString()
         {
-            return String.Format("Coordinate:\tX\tY\tZ\nValue:\t\t{0}\t{1}\t{2}", this.x, this.y, this.z);
+            return String.Format("Coordinate:\tX\tY\tZ\nValue:\t\t{0}\t{1}\t{2}", this.X, this.Y, this.Z);
         }
     }
 }
