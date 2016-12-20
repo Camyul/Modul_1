@@ -6,7 +6,7 @@
         private double x;
         private double y;
         private double z;
-        private static Point3D o = new Point3D(0, 0, 0);
+        private static readonly Point3D o = new Point3D(0, 0, 0);
 
         public Point3D(double x, double y, double z)
         {
