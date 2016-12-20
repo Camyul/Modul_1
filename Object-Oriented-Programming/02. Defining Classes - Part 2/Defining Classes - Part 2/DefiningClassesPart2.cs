@@ -15,6 +15,11 @@
 
             //Calculate distance with static class and static method and print it
             Console.WriteLine("Distance: {0}", Distance.Calculate(firstPoint, secondPoint));
+
+            Path rout66 = new Path();
+            rout66.AddPoint(firstPoint);
+            rout66.AddPoint(secondPoint);
+            rout66.ToString();
         }
     }
 }
