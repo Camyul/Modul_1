@@ -10,7 +10,7 @@ namespace Point3D_ClassLibrary
     using System.Threading.Tasks;
     public static class PathStorage // Task 4
     {
-        public static Path LoadFile(string inputFilePath)
+        public static Path LoadFile(string inputFilePath) //Read point form File
         {
             Path pathFromFile = new Path();
             using (StreamReader reader = new StreamReader(inputFilePath))
@@ -25,7 +25,7 @@ namespace Point3D_ClassLibrary
             }
             return pathFromFile;
         }
-        public static void SaveFile(string outputFilePath, Path points)
+        public static void SaveFile(string outputFilePath, Path points)  //Write point To File
         {
             //File.WriteAllText(outputFilePath, points.ToString());
             using (StreamWriter writer = new StreamWriter(outputFilePath))
