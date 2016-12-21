@@ -2,6 +2,7 @@
 {
     using System;
     using Point3D_ClassLibrary;
+    using Point3D_ClassLibrary.Generic_class;
 
     class DefiningClassesPart2
     {
@@ -27,11 +28,29 @@
             Console.WriteLine("All points coordinate: \n{0}", rout66.ToString());   //Print All Points
             Console.WriteLine("All points count: {0}", rout66.CountPoints);         //Print Points Count
             rout66.ClearPoint();
-            Console.WriteLine(rout66.ToString()!= string.Empty ? rout66.ToString() : "rout66 is Empty");
+            Console.WriteLine(rout66.ToString()!= string.Empty ? rout66.ToString() : "rout66 is Empty\n");
 
             Path routFromFile = PathStorage.LoadFile("../../inputPoints.txt"); // Read points from File - Task 4
             PathStorage.SaveFile("../../outputPoints.txt", routFromFile);      // Write point to File - Task 4
 
+            GenericList<string> holydays = new GenericList<string>(2); // Create Generic List - Task 5
+            holydays.AddElement("Koleda");
+            holydays.AddElement("NG");
+            holydays.AddElement("Ivanov Den");
+            holydays.AddElement("Yordanov Den");
+            Console.WriteLine(holydays[1]); // Print element by index
+            holydays.RemoveAt(1);      // Remove element by index
+            Console.WriteLine(holydays.ToString());
+            holydays.InsertAt("New Year", 1);   // Insert element by index
+            Console.WriteLine(holydays.ToString()); // Print all element from holydeys
+            GenericList<int> numbers = new GenericList<int>();// Create another one Generic List 
+            for (int i = 0; i < 17; i++) //Add elements
+            {
+                numbers.AddElement(i);
+            }
+            Console.WriteLine(numbers.ToString());// Print all element from numbers
+            Console.WriteLine("numbers Capacity: {0}", numbers.Capacity); // Print numbers Arr Capacity
+            Console.WriteLine("numbers Count: {0}", numbers.Count);       // Print numbers Arr Count
 
         }
     }
