@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculateDistance.cs" />
+    <Compile Include="Generic class\GenericList.cs" />
     <Compile Include="Path.cs" />
     <Compile Include="PathStorage.cs" />
     <Compile Include="Point3D.cs" />

@@ -3,15 +3,15 @@
 namespace Point3D_ClassLibrary
 {
     using System;
-    using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.Threading;
     public static class PathStorage // Task 4
     {
         public static Path LoadFile(string inputFilePath) //Read point form File
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Path pathFromFile = new Path();
             using (StreamReader reader = new StreamReader(inputFilePath))
             {
@@ -28,11 +28,15 @@ namespace Point3D_ClassLibrary
         public static void SaveFile(string outputFilePath, Path points)  //Write point To File
         {
             //File.WriteAllText(outputFilePath, points.ToString());
+            if (File.Exists(outputFilePath))
+            {
+                File.Delete(outputFilePath);
+            }
             using (StreamWriter writer = new StreamWriter(outputFilePath))
             {
                 for (int i = 0; i < points.CountPoints; i++)
                 {
-                    writer.WriteLine(points[0]);
+                    writer.WriteLine(points[i]);
                 }
             }
         }
