@@ -1,6 +1,7 @@
 ﻿namespace Point3D_ClassLibrary
 {
     using System;
+    using System.Text;
     public struct Point3D
     {
 
@@ -13,7 +14,7 @@
             this.Y = y;
             this.Z = z;
         }
-        public static Point3D Center // Static Property
+        public static Point3D Center // Static Property - Task 2
         {
             get
             {
@@ -25,7 +26,12 @@
         public double Z { get; private set; }
         public override string ToString()
         {
-            return String.Format("Coordinate:\tX\tY\tZ\nValue:\t\t{0}\t{1}\t{2}", this.X, this.Y, this.Z);
+            StringBuilder pointToString = new StringBuilder();
+            pointToString.Append("Coordinate:\tX\tY\tZ");
+            pointToString.AppendLine();
+            pointToString.Append(String.Format("Value:\t\t{0}\t{1}\t{2}\n", this.X, this.Y, this.Z));
+            return pointToString.ToString();
+          //return String.Format("Coordinate:\tX\tY\tZ\n\rValue:\t\t{0}\t{1}\t{2}\n", this.X, this.Y, this.Z);
         }
     }
 }

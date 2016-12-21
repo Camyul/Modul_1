@@ -1,0 +1,18 @@
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
+Coordinate:	X	Y	Z
+Value:		4	2	10
+
