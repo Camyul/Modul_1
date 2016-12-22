@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Point3D_ClassLibrary.Generic_class
 {
+    using System;
+    using System.Text;
     public class Matrix<T> where T : IComparable,      //Class Matrix<T> - Task 8
                               IComparable<T>,
                               IConvertible,
@@ -13,8 +11,8 @@ namespace Point3D_ClassLibrary.Generic_class
                               IFormattable
     {
         private T[,] matixArr;  // Field
-        private  int rows;
-        private  int cols;
+        private int rows;
+        private int cols;
 
 
         public Matrix(int row, int col)     //Constructor
@@ -34,7 +32,7 @@ namespace Point3D_ClassLibrary.Generic_class
             }
         }
         private int Cols          //Property 
-        {          
+        {
             get { return cols; }
             set
             {
@@ -82,6 +80,55 @@ namespace Point3D_ClassLibrary.Generic_class
                 }
             }
             return resultArr;
+        }
+        public static Matrix<T> operator *(Matrix<T> firstArr, Matrix<T> secondArr)
+        {
+            if (firstArr.Rows != secondArr.Cols)
+            {
+                throw new InvalidOperationException("Invalid operation! Matrices must be of one and same size...");
+            }
+            Matrix<T> resultArr = new Matrix<T>(firstArr.Rows, secondArr.Cols);
+            for (int i = 0; i < resultArr.Rows; i++)
+            {
+                for (int j = 0; j < resultArr.Cols; j++)
+                {
+                    for (int k = 0; k < firstArr.Cols; k++)
+                    {
+                        resultArr[i, j] += (dynamic)firstArr[i, k] * (dynamic)secondArr[k, j];
+                    }
+                }
+            }
+            return resultArr;
+        }
+        public static bool operator true(Matrix<T> matrix) // Implement the true operator (check for non-zero elements) - Task 10
+        {
+            bool isTrue = true;
+            for (int i = 0; i < matrix.Rows && isTrue; i++)
+            {
+                for (int j = 0; j < matrix.Cols && isTrue; j++)
+                {
+                    if ((dynamic)matrix[i,j] == 0)
+                    {
+                        isTrue = false;
+                    }
+                }
+            }
+            return isTrue;
+        }
+        public static bool operator false(Matrix<T> matrix) // Implement the false operator (check for non-zero elements) - Task 10
+        {
+            bool isTrue = true;
+            for (int i = 0; i < matrix.Rows && isTrue; i++)
+            {
+                for (int j = 0; j < matrix.Cols && isTrue; j++)
+                {
+                    if ((dynamic)matrix[i, j] == 0)
+                    {
+                        isTrue = false;
+                    }
+                }
+            }
+            return !isTrue;
         }
         public override string ToString()       //Override ToString() Method
         {
