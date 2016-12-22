@@ -69,7 +69,6 @@
             Console.WriteLine(firstMatrix.ToString());
             firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
             Console.WriteLine(firstMatrix.ToString());
-            Console.WriteLine(firstMatrix.GetRows());
 
 
         }
