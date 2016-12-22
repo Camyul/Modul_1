@@ -13,22 +13,43 @@ namespace Point3D_ClassLibrary.Generic_class
                               IFormattable
     {
         private T[,] matixArr;  // Field
+        private  int rows;
+        private  int cols;
 
 
-        public Matrix(int rows, int cols)     //Constructor
+        public Matrix(int row, int col)     //Constructor
         {
-            this.Rows = rows;
-            this.Cols = cols;
+            this.Rows = row;
+            this.Cols = col;
             matixArr = new T[this.Rows, this.Cols];
         }
 
-        public int Rows { get; set; }       //Property
-        public int Cols { get; set; }
-
-        public T this[int rows, int cols]            //Indexer - Task 9
+        private int Rows      //Property 
+        {
+            get { return rows; }
+            set
+            {
+                CheckIndexMatrixRange(value);
+                this.rows = value;
+            }
+        }
+        private int Cols          //Property 
+        {          
+            get { return cols; }
+            set
+            {
+                CheckIndexMatrixRange(value);
+                this.cols = value;
+            }
+        }
+        //public int GetRows()   // Return numbers of rows
+        //{
+        //    return this.Rows;
+        //}
+        public T this[int row, int col]            //Indexer - Task 9
         {
             get { return matixArr[this.Rows, this.Cols]; }
-            set { this.matixArr[rows, cols] = value; }
+            set { this.matixArr[row, col] = value; }
         }
 
         public override string ToString()       //Override ToString() Method
@@ -44,6 +65,13 @@ namespace Point3D_ClassLibrary.Generic_class
                 sb.Append("\n");
             }
             return sb.ToString();
+        }
+        private static void CheckIndexMatrixRange(int value)
+        {
+            if (value < 0 || value > int.MaxValue)
+            {
+                throw new ArgumentOutOfRangeException("Index out of Range or Negative");
+            }
         }
     }
 }
