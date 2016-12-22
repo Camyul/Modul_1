@@ -48,10 +48,41 @@ namespace Point3D_ClassLibrary.Generic_class
         //}
         public T this[int row, int col]            //Indexer - Task 9
         {
-            get { return matixArr[this.Rows, this.Cols]; }
+            get { return this.matixArr[row, col]; }
             set { this.matixArr[row, col] = value; }
         }
-
+        public static Matrix<T> operator +(Matrix<T> firstArr, Matrix<T> secondArr)
+        {
+            if (firstArr.Rows != secondArr.Rows || firstArr.Cols != secondArr.Cols)
+            {
+                throw new InvalidOperationException("Invalid operation! Matrices must be of one and same size...");
+            }
+            Matrix<T> resultArr = new Matrix<T>(firstArr.rows, firstArr.cols);
+            for (int i = 0; i < firstArr.Rows; i++)
+            {
+                for (int j = 0; j < firstArr.Cols; j++)
+                {
+                    resultArr[i, j] = (dynamic)firstArr[i, j] + (dynamic)secondArr[i, j];
+                }
+            }
+            return resultArr;
+        }
+        public static Matrix<T> operator -(Matrix<T> firstArr, Matrix<T> secondArr)
+        {
+            if (firstArr.Rows != secondArr.Rows || firstArr.Cols != secondArr.Cols)
+            {
+                throw new InvalidOperationException("Invalid operation! Matrices must be of one and same size...");
+            }
+            Matrix<T> resultArr = new Matrix<T>(firstArr.Rows, firstArr.Cols);
+            for (int i = 0; i < firstArr.Rows; i++)
+            {
+                for (int j = 0; j < firstArr.Cols; j++)
+                {
+                    resultArr[i, j] = (dynamic)firstArr[i, j] - (dynamic)secondArr[i, j];
+                }
+            }
+            return resultArr;
+        }
         public override string ToString()       //Override ToString() Method
         {
             StringBuilder sb = new StringBuilder();

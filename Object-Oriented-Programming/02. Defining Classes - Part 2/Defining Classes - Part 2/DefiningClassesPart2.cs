@@ -9,9 +9,9 @@
         static void Main()
         {
             //Create two 3D Points and Print it - Task 1
-            Point3D firstPoint = new Point3D (1.1, 2.2, 3.3);
+            Point3D firstPoint = new Point3D(1.1, 2.2, 3.3);
             Console.WriteLine(firstPoint.ToString());
-            Point3D secondPoint = Point3D.Center; 
+            Point3D secondPoint = Point3D.Center;
             Console.WriteLine(Point3D.Center.ToString()); // Print static field - Task 2
 
             //Calculate distance with static class and static method and print it - Task 3
@@ -23,12 +23,12 @@
             rout66.AddPoint(new Point3D(5, 8, 3));
             rout66.AddPoint(new Point3D(6, 6, 6));
             rout66.AddPoint(new Point3D(3.3, 3.3, 3.3));
-            rout66.RemovePoint(new Point3D (5, 8, 3));
+            rout66.RemovePoint(new Point3D(5, 8, 3));
             Console.WriteLine("Point with index[2] is:\n{0}\n", rout66[2]);         // Print by index
             Console.WriteLine("All points coordinate: \n{0}", rout66.ToString());   //Print All Points
             Console.WriteLine("All points count: {0}", rout66.CountPoints);         //Print Points Count
             rout66.ClearPoint();
-            Console.WriteLine(rout66.ToString()!= string.Empty ? rout66.ToString() : "rout66 is Empty\n");
+            Console.WriteLine(rout66.ToString() != string.Empty ? rout66.ToString() : "rout66 is Empty\n");
 
             Path routFromFile = PathStorage.LoadFile("../../inputPoints.txt"); // Read points from File - Task 4
             PathStorage.SaveFile("../../outputPoints.txt", routFromFile);      // Write point to File - Task 4
@@ -57,20 +57,34 @@
             Console.WriteLine("Min Element is: {0}", holydays.MinElement());        //Task 7
             Console.WriteLine("Max Element is: {0}\n", holydays.MaxElement());      //Task 7
 
-            Matrix<int> firstMatrix = new Matrix<int>(6,5);     //Create Matrix<T> - Task 8
+            Matrix<int> firstMatrix = new Matrix<int>(5, 5);     //Create Matrix<T> - Task 8
             Random rnd = new Random();
-            for (int row = 0; row < 6; row++)                   //Add elements in Matrix by index - Task 9
+            //Console.WriteLine(firstMatrix.ToString());
+            //firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
+            //Console.WriteLine(firstMatrix.ToString());
+            for (int i = 0; i < 5; i++)                   //Add elements in Matrix by index - Task 9
             {
-                for (int col = 0; col < 5; col++)
+                for (int j = 0; j < 5; j++)
                 {
-                    firstMatrix[row, col] = rnd.Next(10, 100);
+                    firstMatrix[i, j] = rnd.Next(10, 50);
                 }
             }
+            Matrix<int> secondMatrix = new Matrix<int>(5, 5);
+            for (int i = 0; i < 5; i++)                   //Add elements in Matrix by index - Task 9
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    secondMatrix[i, j] = rnd.Next(10, 50);
+                }
+            } 
             Console.WriteLine(firstMatrix.ToString());
-            firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
-            Console.WriteLine(firstMatrix.ToString());
-
-
+            Console.WriteLine(secondMatrix.ToString());
+            Console.WriteLine("subtraction of matrices");
+            Console.WriteLine(firstMatrix - secondMatrix); //Subtraction of matrices - Task 10
+            Console.WriteLine("addition of matrices");
+            Console.WriteLine(firstMatrix + secondMatrix); //Addition of matrices - Task 10
         }
+
+        
     }
 }
