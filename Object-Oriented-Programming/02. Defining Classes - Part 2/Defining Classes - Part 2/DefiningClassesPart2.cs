@@ -8,7 +8,7 @@
     {
         static void Main()
         {
-            //Create two 3D Points and Print it
+            //Create two 3D Points and Print it - Task 1
             Point3D firstPoint = new Point3D (1.1, 2.2, 3.3);
             Console.WriteLine(firstPoint.ToString());
             Point3D secondPoint = Point3D.Center; 
@@ -50,7 +50,26 @@
             }
             Console.WriteLine(numbers.ToString());// Print all element from numbers
             Console.WriteLine("numbers Capacity: {0}", numbers.Capacity); // Print numbers Arr Capacity
-            Console.WriteLine("numbers Count: {0}", numbers.Count);       // Print numbers Arr Count
+            Console.WriteLine("numbers Count: {0}\n", numbers.Count);       // Print numbers Arr Count
+            //numbers.ClearAll(); // Delete all elements from numbers and set default size
+            Console.WriteLine("IndexOfElement is: {0}\n", holydays.IndexOfElement("Yordanov Den"));//Finding element by its value and print it index - Task 5
+
+            Console.WriteLine("Min Element is: {0}", holydays.MinElement());        //Task 7
+            Console.WriteLine("Max Element is: {0}\n", holydays.MaxElement());      //Task 7
+
+            Matrix<int> firstMatrix = new Matrix<int>(5,5);     //Create Matrix<T> - Task 8
+            Random rnd = new Random();
+            for (int row = 0; row < 5; row++)                   //Add elements in Matrix by index - Task 9
+            {
+                for (int col = 0; col < 5; col++)
+                {
+                    firstMatrix[row, col] = rnd.Next(10, 100);
+                }
+            }
+            Console.WriteLine(firstMatrix.ToString());
+            firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
+            Console.WriteLine(firstMatrix.ToString());
+
 
         }
     }
