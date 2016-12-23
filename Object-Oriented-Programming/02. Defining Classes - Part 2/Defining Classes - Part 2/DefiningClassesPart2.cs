@@ -4,12 +4,14 @@
     using Point3D_ClassLibrary;
     using Point3D_ClassLibrary.Generic_class;
 
+    [VersionAttribute(11, 2)]
     class DefiningClassesPart2
     {
         static void Main()
         {
-            //Create two 3D Points and Print it - Task 1
-            Point3D firstPoint = new Point3D(1.1, 2.2, 3.3);
+          
+        //Create two 3D Points and Print it - Task 1
+        Point3D firstPoint = new Point3D(1.1, 2.2, 3.3);
             Console.WriteLine(firstPoint.ToString());
             Point3D secondPoint = Point3D.Center;
             Console.WriteLine(Point3D.Center.ToString()); // Print static field - Task 2
@@ -58,33 +60,41 @@
             Console.WriteLine("Max Element is: {0}\n", holydays.MaxElement());      //Task 7
 
             Matrix<int> firstMatrix = new Matrix<int>(5, 5);     //Create Matrix<T> - Task 8
+
             Random rnd = new Random();
-            //Console.WriteLine(firstMatrix.ToString());
-            //firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
-            //Console.WriteLine(firstMatrix.ToString());
             for (int i = 0; i < 5; i++)                   //Add elements in Matrix by index - Task 9
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    firstMatrix[i, j] = rnd.Next(10, 50);
+                    firstMatrix[i, j] = rnd.Next(0, 10);
                 }
             }
+            Console.WriteLine(firstMatrix.ToString());
+            firstMatrix[3, 0] = 88;                             //Replace element from Matrix by index - Task9
+            //Console.WriteLine(firstMatrix.ToString());
             Matrix<int> secondMatrix = new Matrix<int>(5, 5);
             for (int i = 0; i < 5; i++)                   //Add elements in Matrix by index - Task 9
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    secondMatrix[i, j] = rnd.Next(10, 50);
+                    secondMatrix[i, j] = rnd.Next(0, 10);
                 }
-            } 
-            Console.WriteLine(firstMatrix.ToString());
+            }
             Console.WriteLine(secondMatrix.ToString());
-            Console.WriteLine("subtraction of matrices");
+            Console.WriteLine("Subtraction of matrices");
             Console.WriteLine(firstMatrix - secondMatrix); //Subtraction of matrices - Task 10
-            Console.WriteLine("addition of matrices");
+            Console.WriteLine("Addition of matrices");
             Console.WriteLine(firstMatrix + secondMatrix); //Addition of matrices - Task 10
-        }
+            Console.WriteLine("Multiplication of matrices");
+            Console.WriteLine(firstMatrix * secondMatrix); //Multiplication of matrices - Task 10
+            Console.WriteLine("The firstMatrix: {0}", firstMatrix ? "Non-Zero" : "Have Zero Element");//check for non-zero elements - Task 10
 
-        
+            Type type = typeof(DefiningClassesPart2); // Print VersionAttribute - Task 11
+            object[] allAttributes = type.GetCustomAttributes(false);
+            foreach (VersionAttribute attr in allAttributes)
+            {
+                Console.WriteLine("\nVersion {0}.{1} ", attr.Major, attr.Minor);
+            }
+        }
     }
 }
