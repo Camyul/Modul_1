@@ -4,12 +4,14 @@
     using Point3D_ClassLibrary;
     using Point3D_ClassLibrary.Generic_class;
 
+    [VersionAttribute(11, 2)]
     class DefiningClassesPart2
     {
         static void Main()
         {
-            //Create two 3D Points and Print it - Task 1
-            Point3D firstPoint = new Point3D(1.1, 2.2, 3.3);
+          
+        //Create two 3D Points and Print it - Task 1
+        Point3D firstPoint = new Point3D(1.1, 2.2, 3.3);
             Console.WriteLine(firstPoint.ToString());
             Point3D secondPoint = Point3D.Center;
             Console.WriteLine(Point3D.Center.ToString()); // Print static field - Task 2
@@ -85,9 +87,14 @@
             Console.WriteLine(firstMatrix + secondMatrix); //Addition of matrices - Task 10
             Console.WriteLine("Multiplication of matrices");
             Console.WriteLine(firstMatrix * secondMatrix); //Multiplication of matrices - Task 10
-            Console.WriteLine("The firstMatrix: {0}", firstMatrix ? "Non-Zero" : "Have Zero Elements");//check for non-zero elements - Task 10
-        }
+            Console.WriteLine("The firstMatrix: {0}", firstMatrix ? "Non-Zero" : "Have Zero Element");//check for non-zero elements - Task 10
 
-        
+            Type type = typeof(DefiningClassesPart2); // Print VersionAttribute - Task 11
+            object[] allAttributes = type.GetCustomAttributes(false);
+            foreach (VersionAttribute attr in allAttributes)
+            {
+                Console.WriteLine("\nVersion {0}.{1} ", attr.Major, attr.Minor);
+            }
+        }
     }
 }

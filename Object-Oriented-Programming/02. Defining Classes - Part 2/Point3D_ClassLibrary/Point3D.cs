@@ -2,9 +2,11 @@
 {
     using System;
     using System.Text;
+
+    
     public struct Point3D
     {
-
+        
         private static readonly Point3D center = new Point3D(0, 0, 0); // Static field
 
         //Constructor
