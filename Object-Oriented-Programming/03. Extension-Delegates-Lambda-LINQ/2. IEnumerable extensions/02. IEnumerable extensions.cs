@@ -4,11 +4,8 @@ namespace IEnumerable_extensions
 {
     using System;
     using System.Collections.Generic;
-    using System.Threading;
     using System.Globalization;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.Threading;
     public class IEnumerable
     {
         static void Main()
