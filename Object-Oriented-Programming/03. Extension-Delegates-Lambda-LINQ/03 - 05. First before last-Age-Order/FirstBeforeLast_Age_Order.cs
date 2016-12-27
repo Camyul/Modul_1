@@ -24,12 +24,24 @@ namespace First_before_last_Age_Order
             var filteredList = listOfStudent.FindAll(st => st.FirstName.CompareTo(st.LastName) < 0); //Task 3
             Console.WriteLine("Task 3 Sort by First Name before to Last Name:\n");
             Print(filteredList);
+
+            var ageList = listOfStudent.FindAll(st => (st.Age >= 18) && (st.Age <= 24)); // Task 4
+            Console.WriteLine("Task 4 Sort by age range (18-24):");
+            PrintName(ageList);
         }
         private static void Print(List<Student> collection)
         {
             foreach (var item in collection)
             {
                 Console.WriteLine("{0}\t{1}\t{2}", item.FirstName, item.LastName, item.Age);
+            }
+            Console.WriteLine();
+        }
+        private static void PrintName(List<Student> collection)
+        {
+            foreach (var item in collection)
+            {
+                Console.WriteLine("{0}\t{1}", item.FirstName, item.LastName);
             }
             Console.WriteLine();
         }
