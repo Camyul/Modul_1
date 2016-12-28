@@ -1,7 +1,7 @@
-﻿using System;
-namespace Student_groups
+﻿namespace Student_groups
 {
     using Students;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -31,12 +31,27 @@ namespace Student_groups
                 }
 
             }
+            //Select only the students that are from group number 2.  - Task 9
 
-            Console.WriteLine();
+            Console.WriteLine("Print only the students that are from group number 2.");
+            List<Student> studentsOfGroupTwo = listOfStudent.FindAll(st => st.GroupNum == 2);
+            Print(studentsOfGroupTwo);
 
-            //Select only the students that are from group number 2.
+            //Use LINQ query. Order the students by FirstName.   - Task 9
+            Console.WriteLine(new string('-', 65));
+            Console.WriteLine("Use LINQ query. Order the students by FirstName. \n");
+            var sortedByFN = from st in listOfStudent
+                             orderby st.FirstName
+                             select st;
+            Print(sortedByFN.ToList());
+        }
 
-            //Use LINQ query. Order the students by FirstName.
+        private static void Print(List<Student> list)
+        {
+            foreach (var st in list)
+            {
+                Console.WriteLine(st.ToString());
+            }
         }
     }
 }

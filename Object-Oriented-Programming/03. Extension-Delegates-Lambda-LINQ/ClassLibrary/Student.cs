@@ -109,6 +109,22 @@
         {
             this.Mark.Add(mark);
         }
+        public override string ToString()
+        {
+            StringBuilder stud = new StringBuilder();
+            stud.Append(this.FirstName);
+            stud.Append("\t");
+            stud.Append(this.LastName);
+            stud.Append("\t");
+            stud.Append(this.FacNum);
+            stud.Append("\t");
+            stud.Append(this.Telefon);
+            stud.Append("\t");
+            stud.Append(this.EMail);
+            stud.Append("\t");
+            stud.Append(this.GroupNum);
 
+            return stud.ToString();
+        }
     }
 }
