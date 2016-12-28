@@ -19,7 +19,7 @@
             listOfStudent.Add(new Student("Maria", "Dobreva", "0120014532", "0887256321", "test5@abv.bg",      2));
             listOfStudent.Add(new Student("Tanya", "Koleva",  "0720102235", "064205322",  "test6@mail.ru",     1));
             listOfStudent.Add(new Student("Tanya", "Toteva",  "0420158741", "0877212001", "test7@yahoo.com",   2));
-            listOfStudent.Add(new Student("Zoran", "Chernev", "0820063598", "02301888",   "test8@mail.bg", 1));
+            listOfStudent.Add(new Student("Zoran", "Chernev", "0820063598", "02301888",   "test8@mail.bg",     1));
             listOfStudent.Add(new Student("Sindy", "Mileva",  "0920082182", "032547124",  "test9@abv.bg",      2));
             //Add List of Marks for every student with loop and random generator
             Random rnd = new Random();
@@ -54,12 +54,21 @@
 
             //Extract all students that have email in abv.bg - Task 11
             var abvEmailStud = from st in listOfStudent
-                               where Student.IndexOf(st.EMail) > 0
+                               where Student.IndexOf(st.EMail, "abv.bg") > 0
                                orderby st.FirstName
                                select st;
             Console.WriteLine(new string('-', 65));
             Console.WriteLine("Print all students that have email in abv.bg - Task 11\n");
             Print(abvEmailStud.ToList());
+
+            //Extract students by phone  - Task 12
+            var sortByPhone = from st in listOfStudent
+                              where Student.IndexOf(st.Telefon, "2") == 1
+                              orderby st.FirstName
+                              select st;
+            Console.WriteLine(new string('-', 65));
+            Console.WriteLine("Print students with phone from Sofia  - Task 12\n");
+            Print(sortByPhone.ToList());
 
         }
 

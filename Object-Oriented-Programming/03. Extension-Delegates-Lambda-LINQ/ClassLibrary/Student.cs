@@ -109,12 +109,12 @@
         {
             this.Mark.Add(mark);
         }
-        public static int IndexOf(string strStudent)
+        public static int IndexOf(string strStudent, string param)
         {
             int abvStudent = -1;
-            if (strStudent.IndexOf("abv.bg") >= 0)
+            if (strStudent.IndexOf(param) >= 0)
             {
-                abvStudent = strStudent.IndexOf("abv.bg");
+                abvStudent = strStudent.IndexOf(param);
             }
          
                 return abvStudent;
