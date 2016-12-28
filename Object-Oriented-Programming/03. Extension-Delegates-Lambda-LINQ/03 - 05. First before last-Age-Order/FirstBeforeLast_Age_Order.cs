@@ -1,6 +1,4 @@
-﻿
-
-namespace First_before_last_Age_Order
+﻿namespace First_before_last_Age_Order
 {
     using System;
     using System.Collections.Generic;
