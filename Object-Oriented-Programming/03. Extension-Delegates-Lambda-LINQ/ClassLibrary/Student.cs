@@ -1,4 +1,4 @@
-﻿namespace Students
+﻿namespace ClassLibrary
 {
     using System;
     using System.Collections.Generic;
@@ -108,6 +108,17 @@
         public void AddMark(int mark)
         {
             this.Mark.Add(mark);
+        }
+        public static int IndexOf(string strStudent)
+        {
+            int abvStudent = -1;
+            if (strStudent.IndexOf("abv.bg") >= 0)
+            {
+                abvStudent = strStudent.IndexOf("abv.bg");
+            }
+         
+                return abvStudent;
+            
         }
         public override string ToString()
         {

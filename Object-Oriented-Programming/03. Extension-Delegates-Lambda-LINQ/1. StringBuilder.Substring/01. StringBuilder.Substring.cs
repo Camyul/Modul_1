@@ -4,7 +4,7 @@ namespace StringBuilder.Substring
 {
     using System;
     using System.Text;
-    class StringBuilderSubstring
+    public class StringBuilderSubstring
     {
         static void Main()
         {
