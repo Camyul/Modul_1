@@ -30,9 +30,9 @@
             this.GroupNum = groupNum;
 
         }
-        private List<int> Mark {
+        public List<int> Mark {
             get {return this.mark; }
-            set {this.mark = value; }
+            private set {this.mark = value; }
         }  // List of Marks
         public int GroupNum {
             get { return this.groupNumber; }
@@ -105,10 +105,12 @@
                 this.facNum = value;
             }
         }
+
         public void AddMark(int mark)
         {
             this.Mark.Add(mark);
         }
+
         public static int IndexOf(string strStudent, string param)
         {
             int abvStudent = -1;
@@ -120,6 +122,8 @@
                 return abvStudent;
             
         }
+
+        
         public override string ToString()
         {
             StringBuilder stud = new StringBuilder();

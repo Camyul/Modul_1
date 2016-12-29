@@ -22,8 +22,8 @@
             listOfStudent.Add(new Student("Zoran", "Chernev", "0820063598", "02301888",   "test8@mail.bg",     1));
             listOfStudent.Add(new Student("Sindy", "Mileva",  "0920082182", "032547124",  "test9@abv.bg",      2));
             //Add List of Marks for every student with loop and random generator
-            Random rnd = new Random();
-            foreach (var st in listOfStudent)
+            Random rnd = new Random();   
+            foreach (var st in listOfStudent)       // Generate Random Marks
             {
                 for (int i = 0; i < 3; i++)
                 {
@@ -31,6 +31,7 @@
                 }
 
             }
+
             //Select only the students that are from group number 2.  - Task 9
 
             Console.WriteLine("Print only the students that are from group number 2. - Task 9\n");
@@ -70,6 +71,39 @@
             Console.WriteLine("Print students with phone from Sofia  - Task 12\n");
             Print(sortByPhone.ToList());
 
+            //Select all students that have at least one mark Excellent (6) into a new anonymous class  - Task 13
+            Console.WriteLine(new string('-', 65));
+            Console.WriteLine("Select all students that have at least one mark Excellent(6). Use LINQ -Task 13\n");
+            var anonymClassStudent = from st in listOfStudent
+                                     where st.Mark.Contains(6)
+                                     select new
+                                     {
+                                         FullName = st.FirstName + " " + st.LastName,
+                                         Marks = st.Mark
+                                     };
+            foreach (var st in anonymClassStudent)
+            {
+                Console.WriteLine(st.FullName);
+                Console.WriteLine(String.Join(" ", st.Marks));
+            }
+
+            //Write down a similar program that extracts the students with exactly two marks "2"
+            Console.WriteLine(new string('-', 65));
+            Console.WriteLine("Write down a similar program that extracts the students with exactly two marks \"2\" -Task 14\n");
+           
+            List<Student> stTwoTwo = listOfStudent.SearchTwoMarksTwo();
+            if (stTwoTwo.Count < 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("The Marks was generated randomly, need exactly two Marks 2!");
+                Console.WriteLine("Please start the program again (CTRL + F5), if needed 4-5 times. \n");
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            foreach (var st in stTwoTwo)
+            {
+                Console.WriteLine(st.FirstName + " " + st.LastName);
+                Console.WriteLine(String.Join(" ", st.Mark));
+            }
         }
 
         private static void Print(List<Student> list)
