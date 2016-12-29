@@ -101,8 +101,8 @@
             }
             foreach (var st in stTwoTwo)
             {
-                Console.WriteLine(st.FirstName + " " + st.LastName);
-                Console.WriteLine(String.Join(" ", st.Mark));
+                Console.WriteLine(st.FirstName + " " + st.LastName + "\tfac.N: " + st.FacNum + "\tTel: " +st.Telefon);
+                Console.WriteLine("Marks: " + String.Join(" ", st.Mark));
             }
         }
 
