@@ -1,12 +1,8 @@
 ﻿namespace _07.Timer
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
-    
+
     public class Timer_Task7
     {
         static void Main()

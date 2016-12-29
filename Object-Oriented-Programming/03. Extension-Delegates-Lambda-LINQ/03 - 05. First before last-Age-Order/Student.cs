@@ -1,10 +1,6 @@
 ﻿namespace First_before_last_Age_Order
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     public class Student
     {
         private string firstName;

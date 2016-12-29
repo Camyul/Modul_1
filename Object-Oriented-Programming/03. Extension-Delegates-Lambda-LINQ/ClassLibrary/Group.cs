@@ -1,10 +1,5 @@
 ﻿namespace ClassLibrary
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     public class Group                      //Task 16
     {
         public int GroupNum { get; set; }  

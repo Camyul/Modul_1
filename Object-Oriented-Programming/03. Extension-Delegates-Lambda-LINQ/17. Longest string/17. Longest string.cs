@@ -1,10 +1,7 @@
 ﻿namespace Longest_string
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     class LongestString
     {
         static void Main() 

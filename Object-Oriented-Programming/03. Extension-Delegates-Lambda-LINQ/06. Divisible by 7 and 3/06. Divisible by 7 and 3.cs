@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _06.Divisible_by_7_and_3
+﻿namespace _06.Divisible_by_7_and_3
 {
+    using System;
+    using System.Linq;
     class DivisibleBySevenAndThree
     {
         static void Main()
