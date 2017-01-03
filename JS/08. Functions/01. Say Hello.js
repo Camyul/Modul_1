@@ -1,9 +1,5 @@
-function solve(args) {
-    let name = args;
-    sayName(name);
-
-    function sayName(n) {
-        console.log('Hello, <' + n + '>!');
-    };
+function sayHello(args) {
+    var name = args[0];
+    console.log('Hello, ' + name + '!');
 }
-solve("What's up");
+sayHello(['Peter']);
