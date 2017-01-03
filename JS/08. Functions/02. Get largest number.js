@@ -8,16 +8,15 @@ function solve(args) {
     } else {
         return getMax(numOne, numTwo);
     }
-}
 
-function getMax(first, second) {
-    if (first > second) {
-        return first;
-    } else if (second > first) {
-        return second;
-    } else {
-        return -1;
+    function getMax(first, second) {
+        if (first > second) {
+            return first;
+        } else {
+            return second;
+        }
     }
 }
+
 //console.log(solve(['8 3 6']));
 console.log(solve(['7 19 19']));
