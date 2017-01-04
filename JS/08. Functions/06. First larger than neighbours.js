@@ -2,14 +2,14 @@ function solve(args) {
     'use strict';
     let arr = args[1].split(' '),
         l = arr.length,
-        i;
+        count = 0;
 
-    for (i = 1; i < l - 1; i += 1) {
+    for (let i = 1; i < l - 1; i += 1) {
         if (largestThan(i, arr[i])) {
-            break;
+            count++;
         }
     }
-    console.log(i);
+    console.log(count);
 
     function largestThan(j, element) {
         if ((+element > +arr[j - 1]) && (+element > +arr[j + 1])) {
