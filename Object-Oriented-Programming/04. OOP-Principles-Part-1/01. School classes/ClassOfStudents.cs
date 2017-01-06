@@ -10,14 +10,39 @@
         private int year;
         private char identifier;                            //Fields
         private List<string> textBlock = new List<string>(); //For Icomment
+        private List<Teacher> teachersList = new List<Teacher>();
+        private List<Student> studentList = new List<Student>();
 
-        public ClassOfStudents(int year, char ident) //Constructor
+        public ClassOfStudents(int year, char ident, List<Teacher> teachers, List<Student> students) //Constructor
         {
             this.Year = year;
             this.Identifier = ident;
+            this.TeachersList = teachers;
+            this.StudentList = students;
         }
 
-        public int Year
+        public List<Student> StudentList //Property
+        {
+            get { return this.studentList; }
+            private set
+            {
+                this.studentList = value;
+            }
+        }
+        public List<Teacher> TeachersList  //Property
+        {
+            get { return this.teachersList; }
+            set
+            {
+                if (value.Count == 0)
+                {
+                    throw new ArgumentOutOfRangeException("Need at least one teacher");
+                }
+                this.teachersList = value;
+            }
+        }
+
+        public int Year         //Property
         {
             get
             {
@@ -32,7 +57,7 @@
                 this.year = value;
             }
         }
-        public char Identifier
+        public char Identifier          //Property
         {
             get
             {
@@ -47,6 +72,9 @@
                 this.identifier = value;
             }
         }
+
+        
+
         public void AddComent(string comment) //Icomment
         {
             textBlock.Add(comment);
@@ -54,7 +82,14 @@
 
         public override string ToString()  //Override ToString()
         {
-            return String.Format("I am a class: {0}-{1} - comments: {2}\n", this.Year, this.Identifier, String.Join(", ", textBlock));
+            StringBuilder result = new StringBuilder();
+            result.Append(String.Format("\nI am a class: {0}-{1}\nTeachers:\n\n", this.Year, this.Identifier));
+            result.Append(String.Join("", TeachersList));
+            result.Append(String.Format("\nStudents:\n"));
+            result.Append(String.Join("", studentList));
+            result.Append("Commentars for Class: " + String.Join("\n", textBlock));
+            
+            return result.ToString();
         }
     }
 }

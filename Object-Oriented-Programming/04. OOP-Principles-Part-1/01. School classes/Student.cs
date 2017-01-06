@@ -8,7 +8,7 @@
     public class Student : Person, IComment
     {
         private long studentID;     //Field
-        private List<string> textBlock = new List<string>();
+        private List<string> textBlock = new List<string>(); //For IComment
 
         public Student(string first, string last, long num) : base(first, last) //Constructor
         {
@@ -28,14 +28,14 @@
             }
         }
 
-        public void AddComent(string comment)
+        public void AddComent(string comment)  //For IComment
         {
             textBlock.Add(comment);
         }
 
         public override string ToString()  //Override method ToString()
         {
-            return String.Format("{0} {1} {2}\n{3}", this.FirstName, this.LastName, this.StudentID, string.Join("\n", textBlock));
+            return String.Format("{0} {1} StudentID: {2} Commentar for Student: {3}\n", this.FirstName, this.LastName, this.StudentID, string.Join("\n", textBlock));
         }
     }
 }

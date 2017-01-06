@@ -30,7 +30,7 @@
 
         public override string ToString()  //Override ToString()
         {
-            return String.Join("\n", SchoolClasses);
+            return String.Join("\n", this.SchoolClasses);
         }
     }
 }
