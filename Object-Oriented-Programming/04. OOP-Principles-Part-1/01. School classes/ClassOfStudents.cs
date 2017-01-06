@@ -26,7 +26,7 @@
             {
                 if (value < 1 || value > 13)
                 {
-                    throw new ArgumentOutOfRangeException("year can't be negativ or biggest of 13");
+                    throw new ArgumentOutOfRangeException("year can't be negativ or bigger of 13");
                 }
                 this.year = value;
             }
