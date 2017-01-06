@@ -9,10 +9,7 @@
     {
         private List<ClassOfStudents> schoolClasses = new List<ClassOfStudents>(); //Field
 
-        //public School(ClassOfStudents newCl)
-        //{
-        //    this.schoolClasses.Add(newCl);
-        //}
+        
 
         public List<ClassOfStudents> SchoolClasses  //Property
         {
@@ -26,7 +23,7 @@
             }
         }
 
-        public void AddClass (ClassOfStudents newClass)
+        public void AddClass (ClassOfStudents newClass) //For IComment
         {
             this.schoolClasses.Add(newClass);
         }

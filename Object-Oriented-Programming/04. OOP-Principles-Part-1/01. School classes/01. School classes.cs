@@ -9,14 +9,19 @@
     {
         static void Main()
         {
-            School lubenKaravelov = new School();
-            ClassOfStudents desetiB = new ClassOfStudents(10, 'B');
-            ClassOfStudents edinaistiG = new ClassOfStudents(11, 'G');
-            Student pesho = new Student("Pesho", "Peshov", 2233);
-            Student gosho = new Student("Gosho", "Goshov", 3344);
-            lubenKaravelov.AddClass(desetiB);
-            lubenKaravelov.AddClass(edinaistiG);
+            School lubenKaravelov = new School();  //Create new school
+            ClassOfStudents desetiB = new ClassOfStudents(10, 'B');      //Create new Class
+            ClassOfStudents edinaistiG = new ClassOfStudents(11, 'G');  //Create new Class
+            Student pesho = new Student("Pesho", "Peshov", 2233);      //Create new Student
+            Student gosho = new Student("Gosho", "Goshov", 3344);      //Create new Student
+            lubenKaravelov.AddClass(desetiB);       //Add Class to School
+            lubenKaravelov.AddClass(edinaistiG);    //Add Class to School
+
+
+            desetiB.AddComent("Proba, 1, 2, proba, proba...");  // Add Commentar for class
+            gosho.AddComent("Proba, 1, 2, proba, proba...");    // Add Commentar for student
             Console.WriteLine(lubenKaravelov);
+            
             Console.WriteLine(gosho);
         }
     }

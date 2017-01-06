@@ -5,10 +5,11 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    public class ClassOfStudents
+    public class ClassOfStudents : IComment
     {
         private int year;
-        private char identifier;  //Fields
+        private char identifier;                            //Fields
+        private List<string> textBlock = new List<string>(); //For Icomment
 
         public ClassOfStudents(int year, char ident) //Constructor
         {
@@ -46,10 +47,14 @@
                 this.identifier = value;
             }
         }
+        public void AddComent(string comment) //Icomment
+        {
+            textBlock.Add(comment);
+        }
 
         public override string ToString()  //Override ToString()
         {
-            return String.Format("I am a class: {0}-{1}\n", this.Year, this.Identifier);
+            return String.Format("I am a class: {0}-{1} - comments: {2}\n", this.Year, this.Identifier, String.Join(", ", textBlock));
         }
     }
 }

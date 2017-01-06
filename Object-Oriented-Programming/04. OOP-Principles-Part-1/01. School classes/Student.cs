@@ -5,9 +5,10 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    public class Student : Person
+    public class Student : Person, IComment
     {
         private long studentID;     //Field
+        private List<string> textBlock = new List<string>();
 
         public Student(string first, string last, long num) : base(first, last) //Constructor
         {
@@ -27,9 +28,14 @@
             }
         }
 
+        public void AddComent(string comment)
+        {
+            textBlock.Add(comment);
+        }
+
         public override string ToString()  //Override method ToString()
         {
-            return String.Format("{0} {1} {2}", this.FirstName, this.LastName, this.StudentID);
+            return String.Format("{0} {1} {2}\n{3}", this.FirstName, this.LastName, this.StudentID, string.Join("\n", textBlock));
         }
     }
 }
