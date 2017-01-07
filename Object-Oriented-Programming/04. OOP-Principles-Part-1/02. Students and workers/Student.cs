@@ -1,10 +1,6 @@
 ﻿namespace Students_and_workers
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     class Student : Human
     {
         private int grade;      //Field
@@ -29,7 +25,7 @@
 
         public override string ToString()
         {
-            return String.Format("First Name: {0}\tLast Name: {1}\tGrade: {2}", this.FirstName, this.LastName, this.Grade);
+            return String.Format("{0}\t{1}\tGrade: {2}", this.FirstName, this.LastName, this.Grade);
         }
     }
 }
