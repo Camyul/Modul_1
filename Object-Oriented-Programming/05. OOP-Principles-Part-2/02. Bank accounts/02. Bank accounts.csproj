@@ -47,8 +47,11 @@
     <Compile Include="Accounts.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Customers.cs" />
+    <Compile Include="DepositAcc.cs" />
     <Compile Include="Gender.cs" />
+    <Compile Include="Ideposit.cs" />
     <Compile Include="Individual.cs" />
+    <Compile Include="IWithDraw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

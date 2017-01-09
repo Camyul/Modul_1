@@ -27,7 +27,7 @@
         public decimal Balance
         {
             get { return this.balance; }
-            private set
+            protected set
             {
                 this.balance = value;
             }
@@ -44,5 +44,14 @@
                 this.interestRate = value;
             }
         }
+
+        public abstract decimal CalcInterest(decimal numberMounts);
+
+        public override string ToString()
+        {
+            return String.Format("{1}\nOwner: {0}\nBalance: {2:C}\nInterest Rate: {3}",
+                        this.customer.ToString(), GetType().Name, this.Balance, this.interestRate);
+        }
+
     }
 }
