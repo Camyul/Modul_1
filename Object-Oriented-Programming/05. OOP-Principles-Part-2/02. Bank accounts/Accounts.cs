@@ -8,9 +8,6 @@
     public abstract class Accounts
     {
 
-        // Mortgage and loan accounts you have to return money to the bank
-        // so them creating with negative balance.
-
         private Customers customer;
         private decimal balance;
         private decimal interestRate;
@@ -18,12 +15,23 @@
 
         public Accounts(Customers client, decimal balance, decimal interestRate)
         {
-            this.customer = client;
+            this.Customer = client;
             this.Balance = balance;
             this.InterestRate = interestRate;
             this.regDate = DateTime.Now;
         }
 
+        public Customers Customer {
+            get
+            {
+                return this.customer;
+            }
+            private set
+            {
+                this.customer = value;
+            }
+        }
+            
         public decimal Balance
         {
             get { return this.balance; }
@@ -49,8 +57,8 @@
 
         public override string ToString()
         {
-            return String.Format("{1}\nOwner: {0}\nBalance: {2:C}\nInterest Rate: {3}",
-                        this.customer.ToString(), GetType().Name, this.Balance, this.interestRate);
+            return String.Format("{1}\nOwner: {0}\nBalance: {2:C}\nInterest Rate: {3}%",
+                        this.Customer.ToString(), GetType().Name, this.Balance, this.interestRate);
         }
 
     }

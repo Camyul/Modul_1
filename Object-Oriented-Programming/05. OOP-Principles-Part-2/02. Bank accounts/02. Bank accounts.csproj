@@ -52,6 +52,8 @@
     <Compile Include="Ideposit.cs" />
     <Compile Include="Individual.cs" />
     <Compile Include="IWithDraw.cs" />
+    <Compile Include="LoanAccount.cs" />
+    <Compile Include="MortgageAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
