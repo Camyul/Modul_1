@@ -1,5 +1,10 @@
 function solve(args) {
-    for (var i = 0; i < text.length; i++) {
+    let text = args[0],
+        newTxt = "",
+        upCa = false,
+        lowCa = false,
+        mixCa = false;
+    for (let i = 0; i < text.length; i++) {
         if (text[i] == '<' && text[i + 1] == 'u') {
             i = i + 8;
             upCa = true;
@@ -16,11 +21,11 @@ function solve(args) {
             i = i + 10;
             lowCa = false;
         }
-        if (text[i] == '<' && text[i + 1] == 'm') {
+        if (text[i] == '<' && text[i + 1] == 'o') {
             i = i + 9;
             mixCa = true;
         }
-        if (text[i] == '<' && text[i + 1] == '/' && text[i + 2] == 'm') {
+        if (text[i] == '<' && text[i + 1] == '/' && text[i + 2] == 'o') {
             i = i + 10;
             mixCa = false;
         }
@@ -29,17 +34,12 @@ function solve(args) {
         } else if (lowCa == true) {
             newTxt += text[i].toLowerCase();
         } else if (mixCa == true) {
-            if (i & 1 == 1) {
-                newTxt += text[i].toLowerCase();
-            } else {
-                newTxt += text[i].toUpperCase();
-            }
+            newTxt += text[i];
         } else {
             newTxt += text[i];
         }
     }
-    return newTxt;
+    console.log(newTxt);
 }
-
-//console.log(solve(['We are <orgcase>liViNg</orgcase> in a <upcase>yellow submarine</upcase>. We <orgcase>doN\'t</orgcase> have <lowcase>anything</lowcase> else.']));
-console.log(solve(['<upcase>tetet<lowcase>MAMA<orgcase>hIhII</orgcase></lowcase></upcase>']));
+let args = ["We <upcase>yellow <lowcase>anything</lowcase>submarine</upcase>. We <orgcase>dOn't</orgcase> have <lowcase>anything</lowcase> else."];
+solve(args);
