@@ -40,10 +40,6 @@ namespace Point3D_ClassLibrary.Generic_class
                 this.cols = value;
             }
         }
-        //public int GetRows()   // Return numbers of rows
-        //{
-        //    return this.Rows;
-        //}
         public T this[int row, int col]            //Indexer - Task 9
         {
             get { return this.matixArr[row, col]; }

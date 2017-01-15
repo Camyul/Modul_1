@@ -27,7 +27,11 @@ namespace Point3D_ClassLibrary.Generic_class
                 CheckIndex(index);
                 return this.elements[index];
             }
-            set { this.elements[index] = value; }
+            set
+            {
+                CheckIndex(index);
+                this.elements[index] = value;
+            }
         }
 
         
@@ -38,14 +42,14 @@ namespace Point3D_ClassLibrary.Generic_class
             ResizeArr(this.Count);
             this.elements[this.Count - 1] = element;
         }
-        public void RemoveAt(int index)     //Method
+        public void RemoveAt(int index)     //Method - изместваме списъка с едно на ляво.
         {
             CheckIndex(index);
             this.Count--;
             Array.Copy(this.elements, index + 1, this.elements, index, this.Count - index);
-            elements[Count] = default(T);
+            elements[Count] = default(T);  //Последния в списъка става default
         }
-        public void InsertAt(T newElement, int index)//Method
+        public void InsertAt(T newElement, int index)//Method - изместваме списъка с едно на дясно.
         {
             CheckIndex(index);
             this.Count++;
@@ -103,7 +107,7 @@ namespace Point3D_ClassLibrary.Generic_class
             }
             return genericToString.ToString();
         }
-        private void ResizeArr(int count)       //Method - Task 6
+        private void ResizeArr(int count)       //Method - Task 6  - удвоява капацитета
         {
             if (count > this.Capacity)
             {

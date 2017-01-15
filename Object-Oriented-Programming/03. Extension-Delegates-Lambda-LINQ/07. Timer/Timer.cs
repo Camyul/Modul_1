@@ -10,7 +10,7 @@ namespace _07.Timer
     using System.Threading.Tasks;
     public class Timer
     {
-        public delegate void TimerDelegate();
+        public delegate void TimerDelegate(); //Декларирам делегата
 
         private int timeInterval;
 
@@ -31,7 +31,7 @@ namespace _07.Timer
                 this.timeInterval = value;
             }
         }
-        public TimerDelegate DlgAddMethod { get; set; }
+        public TimerDelegate DlgAddMethod { get; set; } //Метод за добавяне на методи към делегата
 
         public void Execute()
         {

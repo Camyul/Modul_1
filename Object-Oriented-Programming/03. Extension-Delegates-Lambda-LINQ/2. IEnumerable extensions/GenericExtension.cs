@@ -6,8 +6,8 @@ namespace IEnumerable_extensions
     using System.Linq;
     public static class IEnumerableExtension    //Task 2
     {
-        public static T SumOfElements<T>(this IEnumerable<T> collection)
-        {
+        public static T SumOfElements<T>(this IEnumerable<T> collection) //Слагаме this преди първия параметър
+        {                                           // и извикваме като допълнителем метод на някакъв обект.
             T sum = default(T);
             foreach (var item in collection)
             {
