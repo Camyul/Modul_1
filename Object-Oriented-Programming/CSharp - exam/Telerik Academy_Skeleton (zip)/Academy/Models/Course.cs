@@ -12,9 +12,9 @@
         private int lecturesPerWeek;
         private DateTime startingDate;
         private DateTime endingDate;
-        private IList<ILecture> lectures;
-        private IList<IStudent> onlineStudents;
-        private IList<IStudent> onsiteStudents;
+        private IList<ILecture> lectures = new List<ILecture>();
+        private IList<IStudent> onlineStudents = new List<IStudent>();
+        private IList<IStudent> onsiteStudents = new List<IStudent>();
 
         public Course(string name, int lecturesPW, DateTime startDate)
         {
@@ -22,9 +22,8 @@
             this.Name = name;
             this.LecturesPerWeek = lecturesPW;
             this.StartingDate = startDate;
+            this.EndingDate = startingDate.AddDays(30);
         }
-
-       // public Season Season { get; set; }
 
         public DateTime EndingDate
         {
@@ -35,10 +34,10 @@
 
             set
             {
-                this.endingDate = this.StartingDate.AddDays(30);
+                this.endingDate = value;
             }
         }
-        //public IList<Student> AddStudentToCourse { get; set; }
+
         public IList<ILecture> Lectures
         {
             get
@@ -89,7 +88,7 @@
             }
             set
             {
-
+                this.onlineStudents = value;
             }
         }
 
@@ -101,7 +100,7 @@
             }
             set
             {
-
+                this.onsiteStudents = value;
             }
         }
 
@@ -124,9 +123,11 @@
             result.Append("* Course\n");
             result.AppendFormat(" - Name: {0}\n", this.Name);
             result.AppendFormat(" - Lectures per week: {0}\n", this.LecturesPerWeek);
-            result.AppendFormat(" - Ending date: {0}\n", this.EndingDate);
-            //result.AppendFormat(" - Lectures: {0}\n", this.Lectures.Count > 0 ? String.Join(",", this.Lectures) : " * There are no lectures in this course!");
-            result.Append(" * There are no lectures in this course!");
+            result.AppendFormat(" - Ending date: {0:dd-MM-yyyy}\n", this.EndingDate);
+            result.AppendFormat(" - Onsite students: {0}\n", this.OnsiteStudents.Count);
+            result.AppendFormat(" - Online students: {0}\n", this.OnlineStudents.Count);
+            result.AppendFormat(" - Lectures: {0}\n", this.Lectures.Count == 0 ? " \n  * There are no lectures in this course!" : String.Join(",", this.Lectures));
+            
             return result.ToString();
         }
 

@@ -11,7 +11,7 @@
     public class Student : Human, IStudent
     {
         private Track track;
-        private IList<ICourseResult> courseResults;
+        private IList<ICourseResult> courseResults = new List<ICourseResult>();
 
         public Student(string userName, Track tr) : base(userName)
         {
@@ -54,8 +54,8 @@
             result.Append("* Student: \n");
             result.AppendFormat(" - Username: {0}\n", this.Username);
             result.AppendFormat(" - Track: {0}\n", this.Track);
-            //result.AppendFormat("- Course results: {0}\n", this.CourseResults.Count > 0 ? String.Join(",", this.CourseResults) : " * User has no course results!");
-            result.Append(" * User has no course results!");
+            result.AppendFormat(" - Course results: {0}\n", this.CourseResults.Count > 0 ? String.Join(",", this.CourseResults) : "\n  * User has no course results!");
+            //result.Append(" * User has no course results!");
             return result.ToString();
         }
     }
