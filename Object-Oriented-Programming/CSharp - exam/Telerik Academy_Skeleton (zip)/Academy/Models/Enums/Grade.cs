@@ -2,5 +2,8 @@
 {
     public enum Grade
     {
+        Exellent = 0,
+        Passed,
+        Faild
     }
 }

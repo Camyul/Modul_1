@@ -12,9 +12,9 @@
         private int lecturesPerWeek;
         private DateTime startingDate;
         private DateTime endingDate;
-        private IList<ILecture> lectures = new List<ILecture>();
-        private IList<IStudent> onlineStudents = new List<IStudent>();
-        private IList<IStudent> onsiteStudents = new List<IStudent>();
+        private IList<ILecture> lectures;
+        private IList<IStudent> onlineStudents;
+        private IList<IStudent> onsiteStudents;
 
         public Course(string name, int lecturesPW, DateTime startDate)
         {
