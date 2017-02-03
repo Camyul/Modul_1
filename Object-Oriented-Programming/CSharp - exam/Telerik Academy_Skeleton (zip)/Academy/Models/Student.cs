@@ -13,6 +13,11 @@
         private Track track;
         private IList<ICourseResult> courseResults = new List<ICourseResult>();
 
+
+        public Student()
+        {
+
+        }
         public Student(string userName, Track tr) : base(userName)
         {
             this.Track = tr;

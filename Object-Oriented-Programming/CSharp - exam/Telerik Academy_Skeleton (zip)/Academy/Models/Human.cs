@@ -8,8 +8,12 @@
     public abstract class Human
     {
         private string userName;
+        public Human()
+        {
 
-        public Human(string userName)
+        }
+
+        public Human(string userName) : base()
         {
             this.Username = userName;
         }
